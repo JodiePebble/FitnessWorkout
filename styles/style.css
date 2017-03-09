@@ -1,6 +1,7 @@
 .mdl-layout__content > .page-content {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    flex-direction: column
 }
 
 .mdl-layout__content > .page-content > .mdl-card{
