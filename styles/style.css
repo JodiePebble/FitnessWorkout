@@ -5,9 +5,8 @@
 }
 
 .card{
-    margin-top: 15px;
-/*    height: 70px;*/
     min-height: 60px;
     border-radius: 3px;
+    margin: 5px 10px;
     background: #ffffff;
 }
