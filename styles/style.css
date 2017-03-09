@@ -4,8 +4,10 @@
     flex-direction: column
 }
 
-.mdl-layout__content > .page-content > .mdl-card{
+.card{
     margin-top: 15px;
 /*    height: 70px;*/
-    min-height: 60px
+    min-height: 60px;
+    border-radius: 3px;
+    background: #ffffff;
 }
