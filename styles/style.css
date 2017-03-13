@@ -1,12 +1,43 @@
 .mdl-layout__content > .page-content {
+/*
     display: flex;
-    justify-content: center;
     flex-direction: column
+*/
+}
+
+.card-icon {
+    font-size:35px;
+    color: #424242
 }
 
 .card{
-    min-height: 60px;
-    border-radius: 3px;
-    margin: 5px 10px;
+    margin: 10px;
     background: #ffffff;
+    border-radius: 4px;
+}
+
+.card > button{
+    height: 55px
+}
+
+.card > button > p{
+    display: flex;
+    align-self: center;
+    margin: 0;
+    margin: 0 20px;
+}
+
+.card_inner{
+    display: flex;
+}
+
+.card > .card-title{
+    margin:
+}
+
+footer {
+    background: #424242;
+    display: flex;
+    height: 56px;
+    justify-content: space-around
 }
