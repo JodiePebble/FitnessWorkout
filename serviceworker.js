@@ -3,7 +3,7 @@ var CACHED_URLS = [
     'second.html',
     'styles/style.css',
     'scripts/mdl/material.min.css',
-    'scripts/mdl/material.js'
+    'scripts/mdl/material.min.js'
 ];
 
 self.addEventListener('install', function(event) {
