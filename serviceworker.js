@@ -5,7 +5,7 @@ var CACHED_URLS = [
     'scripts/mdl/material.min.css',
     'scripts/mdl/material.min.js',
     'scripts/mdl/bower.json',
-    'scripts/mdl/package.js'
+    'scripts/mdl/package.json'
 ];
 
 self.addEventListener('install', function(event) {
