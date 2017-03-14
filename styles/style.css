@@ -41,3 +41,9 @@ footer {
     height: 56px;
     justify-content: space-around
 }
+
+.footer__left-section, .footer__right-section {
+    display: flex;
+    align-items: center;
+}
+
