@@ -45,5 +45,6 @@ footer {
 .footer__left-section, .footer__right-section {
     display: flex;
     align-items: center;
+    margin: 0
 }
 
