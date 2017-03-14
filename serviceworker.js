@@ -1,7 +1,8 @@
 var CACHE_NAME = 'gih-cache';
 var CACHED_URLS = [
-  'second.html',
-  'styles/style.css'
+    'second.html',
+    'styles/style.css',
+    'scripts/mdl/material.min.css'
 ];
 
 self.addEventListener('install', function(event) {
