@@ -1,8 +1,12 @@
-.mdl-layout__content > .page-content {
-/*
+/*main styles*/
+
+.mdl-layout__content > .page_create {
+    min-height: 510px
+}
+
+a{
+    text-decoration: none;
     display: flex;
-    flex-direction: column
-*/
 }
 
 .card-icon {
@@ -16,23 +20,51 @@
     border-radius: 4px;
 }
 
-.card > button{
-    height: 55px
+.create_card{
+    height: 100%
 }
 
-.card > button > p{
+.card > button{
+    height: 65px
+}
+
+.card > a > .card-info > p{
+    margin: 0;
+    padding: 0
+}
+
+.card > button > a > .card-info {
+    width: 100%
+}
+
+.card-title {
     display: flex;
     align-self: center;
-    margin: 0;
+    padding: 0;
     margin: 0 20px;
-}
 
+}
 .card_inner{
     display: flex;
+    align-items: center
 }
 
-.card > .card-title{
-    margin:
+.card_inner > a {
+    width: 100%;
+    align-items: center;
+}
+
+.card_inner > a > .card-info > .card-title{
+    padding: 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #424242
+}
+
+.card_inner > a > .card-info > .card-exercise{
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    align-self: center;
 }
 
 footer {
@@ -45,6 +77,121 @@ footer {
 .footer__left-section, .footer__right-section {
     display: flex;
     align-items: center;
+}
+
+.mdl-logo{
     margin: 0
 }
 
+/*Create new page*/
+
+.main_card {
+    display: flex;
+}
+
+.create_new_card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.create_card_inner{
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    border-bottom: 1px solid #424242;
+}
+
+.workout_name{
+    margin: 15px 15px 0 15px ;
+}
+
+input {
+    border: 1px solid #424242;
+    padding: 10px;
+}
+
+.new_list{
+    margin: 15px;
+    display: flex;
+    flex-direction: column
+}
+
+.workout_list{
+    height: 200px
+}
+
+.new_exercise{
+    height: 130px
+}
+
+.exercise_list{
+    margin-top: 15px;
+    border-bottom: 1px solid #424242
+}
+
+.exercise_list > .exercise {
+    display: flex;
+    justify-content: space-between
+}
+
+.exercise_list > .exercise > button {
+    line-height: 0;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    min-width: 10px;
+}
+
+.exercise_list > .exercise > button > p {
+    margin: 0;
+    padding: 0;
+}
+
+.exercise_list > div > p {
+    margin: 0
+}
+
+.existing_list {
+        border-bottom: none
+}
+
+.time-section {
+    margin-top: 15px
+}
+
+.time-section > .timer{
+    display: flex;
+    justify-content: center;
+    margin: 20px
+}
+
+.time-section > .start-stop {
+    display: flex;
+    justify-content: space-around
+}
+
+.time-section > .timer > p{
+    font-size: 55px;
+    line-height: 55px;
+    margin: 0
+}
+
+.time-section > div > .start-button > p{
+    padding: 0;
+    margin: 0;
+    color: white
+}
+
+.time-button {
+    padding: 0;
+    min-width: 10px;
+    height: 20px;
+}
+
+.time-button > p{
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
