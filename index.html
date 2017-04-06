@@ -11,6 +11,23 @@
     <script src="scripts/mdl/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="apple-touch-icon" sizes="57x57" href="appimages/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="appimages/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="appimages/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="appimages/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="appimages/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="appimages/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="appimages/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="appimages/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="appimages/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="appimages/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="appimages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="appimages/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="appimages/favicon-16x16.png">
+        
+    <meta name="theme-color" content="#4fcsf7">
+    <link rel="manifest" href="manifest.json"> 
+
     <link rel="stylesheet" href="styles/style.css">
     <title>Fitness Workout</title>
 </head>
@@ -33,9 +50,10 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Fitness Workout</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="createNew.html">Create new workout</a>
-                <a class="mdl-navigation__link" href="homeWorkout.html">Home Workouts</a>
-                <a class="mdl-navigation__link" href="gymWorkout.html">Gym Workouts</a>
+                <a class="mdl-navigation__link" href="pages/createNew.html">Create new workout</a>
+                <a class="mdl-navigation__link" href="pages/homeWorkout.html">Home Workouts</a>
+                <a class="mdl-navigation__link" href="pages/gymWorkout.html">Gym Workouts</a>
+                <a class="mdl-navigation__link" href="pages/settings.html">Settings</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -43,7 +61,7 @@
                 <div class="mdl-shadow--2dp card">
                     <button class="card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button">
                         
-                        <a href="createNew.html">
+                        <a href="pages/createNew.html">
                             <i class="material-icons card-icon">&#xEB43;</i>
                             <p class='card-title'>Create new workout</p>
                         </a>
@@ -52,7 +70,7 @@
                 </div>
                 <div class="mdl-shadow--2dp card">
                     <button class="card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button">
-                        <a href='workout1.html'>
+                        <a href='pages/workout1.html'>
                             <i class="material-icons card-icon">&#xE853;</i>
                             <div class='card-info'>
                                 <p class='card-title'>Workout 1</p>
@@ -79,10 +97,10 @@
             </div>
         </main>
         <footer class="">
-            <a href='homeWorkout.html' class="footer__left-section">
+            <a href='pages/homeWorkout.html' class="footer__left-section">
                 <div class="mdl-logo">Home Workouts</div>
             </a>
-            <a href='gymWorkout.html' class="footer__right-section">
+            <a href='pages/gymWorkout.html' class="footer__right-section">
                 <div class="mdl-logo">Gym Workouts</div>
             </a>
         </footer>

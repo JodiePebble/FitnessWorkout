@@ -79,6 +79,10 @@ footer {
     align-items: center;
 }
 
+.active-page{
+    color: rgb(3,169,244)
+} 
+
 .mdl-logo{
     margin: 0
 }
@@ -154,8 +158,11 @@ input {
 }
 
 .existing_list {
-        border-bottom: none
+    border-bottom: none;
+    overflow: auto;
 }
+
+
 
 .time-section {
     margin-top: 15px
@@ -194,4 +201,13 @@ input {
     padding: 0;
     margin: 0;
     line-height: 0;
+}
+
+
+/*SETTINGS*/
+
+h4{
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #424242;
 }

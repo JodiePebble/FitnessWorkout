@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="scripts/mdl/material.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-pink.min.css" />
+    <script src="scripts/mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Fitness Workout</title>
+</head>
+
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Fitness Workout</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="../index.html"><i class="material-icons">&#xE88A;</i></a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Fitness Workout</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="createNew.html">Create new workout</a>
+                <a class="mdl-navigation__link" href="homeWorkout.html">Home Workouts</a>
+                <a class="mdl-navigation__link" href="gymWorkout.html">Gym Workouts</a>
+            </nav>
+        </div>
+          
+        <main class="mdl-layout__content settings-main">
+                <div class="page-content">
+                <div class="mdl-shadow--2dp card">
+                    <div>
+                        <h4>Settings</h4>
+                    </div>
+                    
+                    <div> 
+                        <label>
+                            Home Postcode
+                        </label>
+                        <input/>
+                    
+                    </div>
+                </div>
+            </div>
+        </main>
+          
+        <footer class="">
+            <a href='homeWorkout.html' class="footer__left-section">
+                <div class="mdl-logo">Home Workouts</div>
+            </a>
+            <a href='gymWorkout.html' class="footer__right-section">
+                <div class="mdl-logo">Gym Workouts</div>
+            </a>
+        </footer>
+    </div>
+
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
+                    console.log('Service worker registered successfully');
+                }).catch(function(err) {
+                    console.log('Service worker registration failed: ', err);
+                });
+            }
+        </script>
+  </body>
+</html>

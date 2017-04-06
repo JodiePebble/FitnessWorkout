@@ -1,0 +1,33 @@
+var workouts = [
+    {
+        "name" : "Workout 1",
+        "exercises" : [
+            {
+                "exerciseName": "Tricep Curls",
+                "exerciseTime" : 30
+            },
+            {
+                "exerciseName": "Burpees",
+                "exerciseTime" : 30
+            }
+        ],
+        "breakTime" : 10,
+        "homeOrGym" : "home"
+    },
+    
+],
+
+var existing_workouts = [
+    {
+        "exerciseName": "Tricep Curls",
+        "exerciseTime" : 30
+    },
+    {
+        "exerciseName": "Burpees",
+        "exerciseTime" : 30
+    },
+    {
+        "exerciseName": "Leg Raises",
+        "exerciseTime" : 30
+    }
+]
