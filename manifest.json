@@ -1,8 +1,8 @@
 {
     "name": "Fitness Workout Guide",
     "short_name": "Fitness Workout",
-    "background_color": "#4fcsf7",
-    "theme_color": "#4fcsf7", 
+    "background_color": "#2196F3",
+    "theme_color": "#2196F3", 
     "display": "browser",
     "icons": [
         {
