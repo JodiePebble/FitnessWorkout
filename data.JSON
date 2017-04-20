@@ -1,4 +1,4 @@
-var workouts = [
+workouts = [
     {
         "name" : "Workout 1",
         "exercises" : [
