@@ -28,7 +28,7 @@ if(workoutsContainer){
                 </div>`;
             }).join("\n");
             
-            const workoutsContainer = document.getElementById('workouts');
+            const workoutsContainer = document.getElementById('workouts-content');
             workoutsContainer.innerHTML = workoutsHTML;
         });
 }
