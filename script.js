@@ -6,7 +6,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-const workoutsContainer = document.getElementById('workouts-content');
+var workoutsContainer = document.getElementById('workouts-content');
 
 console.log(workouts);
 
