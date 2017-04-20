@@ -13,7 +13,7 @@
         ],
         "breakTime" : 10,
         "homeOrGym" : "home",
-        "href" : 'pages/workout1.html'
+        "href" : "pages/workout1.html"
     },
     [
         {
