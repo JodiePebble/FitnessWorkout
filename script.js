@@ -37,6 +37,8 @@ function changeView (){
 
 var workoutName = document.getElementsByClassName('workout-name');
 
+console.log('workoutName', workoutName)
+
 var id = localStorage.getItem('id');
 
 workoutName.innerText = workouts[id].name;
