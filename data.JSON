@@ -15,7 +15,7 @@
         "homeOrGym" : "home",
         "href" : 'pages/workout1.html'
     },
-    existing_workouts = [
+    [
         {
             "exerciseName": "Tricep Curls",
             "exerciseTime" : 30
