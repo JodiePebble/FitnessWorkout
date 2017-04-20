@@ -22,6 +22,8 @@ for(var i; i <= workouts.length -1; i ++){
                         "</a>"+
                     "</button>"+
                 "</div>";
+    
+    console.log(workoutsContainer.innerHTML);
 };
 
 
