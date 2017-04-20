@@ -12,22 +12,21 @@ var workouts = [
             }
         ],
         "breakTime" : 10,
-        "homeOrGym" : "home"
+        "homeOrGym" : "home",
+        "href" : 'pages/workout1.html'
     },
-    
-],
-
-var existing_workouts = [
-    {
-        "exerciseName": "Tricep Curls",
-        "exerciseTime" : 30
-    },
-    {
-        "exerciseName": "Burpees",
-        "exerciseTime" : 30
-    },
-    {
-        "exerciseName": "Leg Raises",
-        "exerciseTime" : 30
-    }
+    existing_workouts = [
+        {
+            "exerciseName": "Tricep Curls",
+            "exerciseTime" : 30
+        },
+        {
+            "exerciseName": "Burpees",
+            "exerciseTime" : 30
+        },
+        {
+            "exerciseName": "Leg Raises",
+            "exerciseTime" : 30
+        }
+    ]  
 ]

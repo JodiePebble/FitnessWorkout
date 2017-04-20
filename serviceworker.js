@@ -1,11 +1,12 @@
-var CACHE_NAME = 'gih-cache';
+var BASE_PATH = '/FitnessWorkout/';
+var CACHE_NAME = 'gih-cache-v1';
 var CACHED_URLS = [
-    'second.html',
-    'styles/style.css',
-    'scripts/mdl/material.min.css',
-    'scripts/mdl/material.min.js',
-    'scripts/mdl/bower.json',
-    'scripts/mdl/package.json'
+    BASE_PATH + 'second.html',
+    BASE_PATH + 'styles/style.css',
+    BASE_PATH + 'scripts/mdl/material.min.css',
+    BASE_PATH + 'scripts/mdl/material.min.js',
+    BASE_PATH + 'scripts/mdl/bower.json',
+    BASE_PATH + 'scripts/mdl/package.json'
 ];
 
 self.addEventListener('install', function(event) {
