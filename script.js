@@ -35,7 +35,7 @@ function changeView (){
     localStorage.setItem('id', this.id);
 }
 
-var workoutName = document.getElementsByClassName('workout-name');
+var workoutName = document.getElementById('workout-name');
 
 console.log('workoutName', workoutName)
 
