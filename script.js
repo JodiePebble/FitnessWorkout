@@ -39,9 +39,11 @@ var id = localStorage.getItem('id');
 var workoutName = document.getElementById('workout-name');
 var workoutNumExercises = document.getElementById('workout-exercises');
 var workoutExerciseList = document.getElementById('workout-exercise-list');
+var workoutBreak = document.getElementById('workout-break');
 
 workoutName.innerHTML = workouts[id].name;
 workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
+workoutBreak.innerHTML = workouts[id].breakTime;
 
 for(var i =0; i <= workouts[id].exercises.length -1; i ++){
     workoutExerciseList.innerHTML += "<div class='exercise'>" +
