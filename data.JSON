@@ -14,19 +14,5 @@
         "breakTime" : 10,
         "homeOrGym" : "home",
         "href" : "pages/workout1.html"
-    },
-    [
-        {
-            "exerciseName": "Tricep Curls",
-            "exerciseTime" : 30
-        },
-        {
-            "exerciseName": "Burpees",
-            "exerciseTime" : 30
-        },
-        {
-            "exerciseName": "Leg Raises",
-            "exerciseTime" : 30
-        }
-    ]  
+    }  
 ]
