@@ -1,6 +1,6 @@
 var workouts = [
     {
-        "name" : "Workout 1",
+        "name" : "Workout 1 hello",
         "exercises" : [
             {
                 "exerciseName": "Tricep Curls",

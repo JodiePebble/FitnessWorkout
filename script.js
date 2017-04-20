@@ -8,8 +8,6 @@ if ('serviceWorker' in navigator) {
 
 var workoutsContainer = document.getElementById('workouts-content');
 
-console.log(workouts);
-
 for(var i =0; i <= workouts.length -1; i ++){
     workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                     "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
@@ -23,20 +21,19 @@ for(var i =0; i <= workouts.length -1; i ++){
                         "</a>"+
                     "</button>"+
                 "</div>";
-    
-    console.log(workoutsContainer.innerHTML);
-};
+    };
 
 var goTo = document.getElementsByClassName('goToWorkout');
 
 for(var i =0; i <= goTo.length -1; i ++){
     goTo[i].addEventListener('click', changeView);
-
 }
 
 function changeView (){
     localStorage.setItem('id', this.id);
 }
+
+
 
 
 
