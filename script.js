@@ -15,7 +15,7 @@ if(workoutsContainer){
             const workoutsHTML = workouts.map(workout => {
                 return `<div class="mdl-shadow--2dp card">
                     <button class="card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button">
-                        <a href='${workout.href}'>
+                        <a href=${workout.href}>
                             <i class="material-icons card-icon">&#xE853;</i>
                             <div class='card-info'>
                                 <p class='card-title'>'${workout.name}'</p>
