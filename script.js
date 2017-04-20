@@ -10,7 +10,7 @@ const workoutsContainer = document.getElementById('workouts-content');
 
 console.log(workouts);
 
-for(var i; i <= workouts.length; i ++){
+for(var i =0; i <= workouts.length; i ++){
     workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                     "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                         "<a id='"+ i +"' href='pages/workout1.html'>" +
