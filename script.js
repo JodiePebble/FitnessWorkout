@@ -35,11 +35,12 @@ function changeView (){
     localStorage.setItem('id', this.id);
 }
 
-var id = localStorage.getItem('id');
-var workoutName = document.getElementById('workout-name');
-var workoutNumExercises = document.getElementById('workout-exercises');
-var workoutExerciseList = document.getElementById('workout-exercise-list');
-var workoutBreak = document.getElementById('workout-break');
+var id = localStorage.getItem('id'),
+    workoutName = document.getElementById('workout-name'),
+    workoutNumExercises = document.getElementById('workout-exercises'),
+    workoutExerciseList = document.getElementById('workout-exercise-list'),
+    workoutBreak = document.getElementById('workout-break'),
+    existingList = document.getElementById('existing_list');
 
 workoutName.innerHTML = workouts[id].name;
 workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
@@ -55,6 +56,15 @@ for(var i =0; i <= workouts[id].exercises.length -1; i ++){
                                     "<span> secs</span>" + 
                                 "</div>" + 
                             "</div>"
+}
+
+for(var i =0; i <= existing_workouts -1; i ++){
+    existingList.innerHTML += "<div class='exercise'>" +
+                                    "<p>"+ existing_workouts[i].exerciseName +"</p>" +
+                                    "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                        "<i class='material-icons'>&#xE147;</i>" +
+                                    "</button>"+
+                                "</div>"
 }
 
 

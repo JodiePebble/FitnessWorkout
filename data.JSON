@@ -11,7 +11,13 @@ var workouts = [
                 "exerciseTime" : 30
             }
         ],
-        "breakTime" : 10,
+        "breakTime" : 20,
         "homeOrGym" : "home",
     }  
+]
+
+var existing_workouts = [
+    {
+        "exerciseName": "Burpees",
+    }
 ]
