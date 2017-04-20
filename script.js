@@ -38,6 +38,21 @@ function changeView (){
 var id = localStorage.getItem('id');
 var workoutName = document.getElementById('workout-name');
 var workoutNumExercises = document.getElementById('workout-exercises');
+var workoutExerciseList = document.getElementById('workout-exercise-list');
 
 workoutName.innerHTML = workouts[id].name;
 workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
+
+for(var i =0; i <= workouts.exercises.length -1; i ++){
+    workoutExerciseList.innerHTML += "<div class='exercise'>" +
+                                "<p>" + workouts.exercises[i].exerciseName +"</p>" +
+                                "<div>" +
+                                    "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
+                                        "<p>" + workouts.exercises[i].exerciseTime +"</p>" + 
+                                    "</button>" +
+                                    "<span>secs</span>" + 
+                                "</div>" + 
+                            "</div>"
+}
+
+
