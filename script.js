@@ -17,7 +17,7 @@ if(document.getElementById('workouts-content')){
                                 "<i class='material-icons card-icon'>&#xE853;</i>" +
                                 "<div class='card-info'>" +
                                     "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                                    "<p class='card-exercise'>6 execises</p>" +
+                                    "<p class='card-exercise'>"+ workouts[i].exercises.length +  "execises</p>" +
                                 "</div>" +
                                 "<i class='material-icons'>&#xE147;</i>"+
                             "</a>"+
