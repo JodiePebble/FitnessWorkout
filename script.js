@@ -18,8 +18,8 @@ if(workoutsContainer){
                         <a href='${workout.href}'>
                             <i class="material-icons card-icon">&#xE853;</i>
                             <div class='card-info'>
-                                <p class='card-title'>Workout 1</p>
-                                <p class='card-exercise'>6 execises</p>
+                                <p class='card-title'>'${workout.name}'</p>
+                                <p class='card-exercise'>'${workout.exercises.length}'</p>
                             </div>
 
                             <i class="material-icons">&#xE147;</i>
