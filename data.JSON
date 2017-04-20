@@ -1,4 +1,4 @@
-workouts = [
+[
     {
         "name" : "Workout 1",
         "exercises" : [
