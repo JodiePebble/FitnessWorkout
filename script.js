@@ -6,10 +6,9 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-
 const workoutsContainer = document.getElementById('workouts-content');
 if(workoutsContainer){
-    fetch("data.json")
+    fetch("data.JSON")
         .then(response => {
             return response.json();
         }).then(workouts => {
