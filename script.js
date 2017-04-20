@@ -41,7 +41,7 @@ console.log('workoutName', workoutName)
 
 var id = localStorage.getItem('id');
 
-workoutName.innerText = workouts[id].name;
+workoutName.innerHTML = workouts[id].name;
 
 //
 //if(workoutsContainer){
