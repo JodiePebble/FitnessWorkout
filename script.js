@@ -21,8 +21,8 @@ for(var i; i <= workouts.length -1; i ++){
                             "<i class='material-icons'>&#xE147;</i>"+
                         "</a>"+
                     "</button>"+
-                "</div>"
-}
+                "</div>";
+};
 
 
 //
