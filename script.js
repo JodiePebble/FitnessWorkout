@@ -8,6 +8,7 @@ if ('serviceWorker' in navigator) {
 
 const workoutsContainer = document.getElementById('workouts-content');
 
+console.log(workouts)
 
 for(var i; i <= workouts.length -1; i ++){
     workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
