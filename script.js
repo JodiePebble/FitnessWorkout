@@ -6,7 +6,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-if(document.getElementById('workouts-content'){
+if(document.getElementById('workouts-content')){
 
     var workoutsContainer = document.getElementById('workouts-content');
 
