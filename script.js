@@ -40,4 +40,4 @@ var workoutName = document.getElementById('workout-name');
 var workoutNumExercises = document.getElementById('workout-exercises');
 
 workoutName.innerHTML = workouts[id].name;
-workoutNumExercises.innerHTML = workouts[id].exercises.length + 'exercises';
+workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
