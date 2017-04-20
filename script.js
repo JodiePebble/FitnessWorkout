@@ -36,7 +36,6 @@ function changeView (){
 
 
 
-
 //
 //if(workoutsContainer){
 //    fetch("data.JSON")
