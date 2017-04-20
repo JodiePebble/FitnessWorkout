@@ -6,9 +6,8 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-if(document.getElementById('workouts-content')){
-
-    var workoutsContainer = document.getElementById('workouts-content');
+var workoutsContainer = document.getElementById('workouts-content');
+if(workoutsContainer){
 
     for(var i =0; i <= workouts.length -1; i ++){
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
@@ -36,8 +35,11 @@ function changeView (){
     localStorage.setItem('id', this.id);
 }
 
+var workoutName = document.getElementsByClassName('workout-name');
 
+var id = localStorage.getItem('id');
 
+workoutName.innerText = workouts[id].name;
 
 //
 //if(workoutsContainer){
