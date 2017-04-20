@@ -19,7 +19,7 @@ if(workoutsContainer){
                             <i class="material-icons card-icon">&#xE853;</i>
                             <div class='card-info'>
                                 <p class='card-title'>${workout.name}</p>
-                                <p class='card-exercise'></p>
+                                <p class='card-exercise'>${workout.exercises.length}</p>
                             </div>
 
                             <i class="material-icons">&#xE147;</i>
