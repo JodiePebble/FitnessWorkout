@@ -43,12 +43,12 @@ var workoutExerciseList = document.getElementById('workout-exercise-list');
 workoutName.innerHTML = workouts[id].name;
 workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
 
-for(var i =0; i <= workouts.exercises.length -1; i ++){
+for(var i =0; i <= workouts[id].exercises.length -1; i ++){
     workoutExerciseList.innerHTML += "<div class='exercise'>" +
-                                "<p>" + workouts.exercises[i].exerciseName +"</p>" +
+                                "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
                                 "<div>" +
                                     "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
-                                        "<p>" + workouts.exercises[i].exerciseTime +"</p>" + 
+                                        "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
                                     "</button>" +
                                     "<span>secs</span>" + 
                                 "</div>" + 
