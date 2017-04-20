@@ -50,7 +50,7 @@ for(var i =0; i <= workouts[id].exercises.length -1; i ++){
                                     "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
                                         "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
                                     "</button>" +
-                                    "<span>secs</span>" + 
+                                    "<span> secs</span>" + 
                                 "</div>" + 
                             "</div>"
 }
