@@ -11,17 +11,17 @@ if(workoutsContainer){
 
     for(var i =0; i <= workouts.length -1; i ++){
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
-                        "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                            "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                                "<i class='material-icons card-icon'>&#xE853;</i>" +
-                                "<div class='card-info'>" +
-                                    "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                                    "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
-                                "</div>" +
-                                "<i class='material-icons'>&#xE147;</i>"+
-                            "</a>"+
-                        "</button>"+
-                    "</div>";
+                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                                                "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
+                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                    "<div class='card-info'>" +
+                                                        "<p class='card-title'>"+ workouts[i].name + "</p>" +
+                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
+                                                    "</div>" +
+                                                    "<i class='material-icons'>&#xE147;</i>"+
+                                                "</a>"+
+                                            "</button>"+
+                                        "</div>";
         };
 }
 
@@ -48,14 +48,14 @@ workoutBreak.innerHTML = workouts[id].breakTime;
 
 for(var i =0; i <= workouts[id].exercises.length -1; i ++){
     workoutExerciseList.innerHTML += "<div class='exercise'>" +
-                                "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
-                                "<div>" +
-                                    "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
-                                        "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
-                                    "</button>" +
-                                    "<span> secs</span>" + 
-                                "</div>" + 
-                            "</div>"
+                                        "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
+                                        "<div>" +
+                                            "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
+                                                "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
+                                            "</button>" +
+                                            "<span> secs</span>" + 
+                                        "</div>" + 
+                                    "</div>"
 }
 
 for(var i =0; i <= existing_workouts -1; i ++){
