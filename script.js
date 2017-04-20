@@ -58,6 +58,8 @@ for(var i =0; i <= workouts[id].exercises.length -1; i ++){
                                     "</div>"
 }
 
+console.log(existing_workouts);
+
 for(var i =0; i <= existing_workouts -1; i ++){
     existingList.innerHTML += "<div class='exercise'>" +
                                     "<p>"+ existing_workouts[i].exerciseName +"</p>" +
