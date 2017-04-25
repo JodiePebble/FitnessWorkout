@@ -106,6 +106,15 @@ footer {
     border-bottom: 1px solid #424242;
 }
 
+.create_card_inner > .card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.create_card_inner > .card-info > .card-exercise{
+    margin: 0 20px;
+}
+
 .workout_name{
     margin: 15px 15px 0 15px ;
 }
