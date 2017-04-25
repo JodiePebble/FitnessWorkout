@@ -101,6 +101,7 @@ footer {
 .create_card_inner{
     display: flex;
     align-items: center;
+    min-height: 66px;
     border-radius: 0;
     border-bottom: 1px solid #424242;
 }
