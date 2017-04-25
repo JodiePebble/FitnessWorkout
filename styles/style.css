@@ -117,6 +117,7 @@ footer {
 .create_card_inner > div > .confirm-btn > i{
     height: auto;
     padding: 0;
+    min-width: 25px;
 }
 
 .create_card_inner > .card-info. card-title{
