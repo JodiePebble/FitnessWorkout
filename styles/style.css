@@ -114,7 +114,7 @@ footer {
     align-items: center
 }
 
-.create_card_inner > .confirm-btn{
+.create_card_inner > div > .confirm-btn{
     height: auto;
     padding: 0;
 }
