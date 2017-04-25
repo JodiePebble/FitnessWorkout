@@ -65,7 +65,7 @@ if(workoutName){
 }
 
 if(existingList){
-    for(var i = 0; i <= existing_workouts -1; i++){
+    for(var i = 0; i <= existing_workouts.length -1; i++){
         console.log(i);
         existingList.innerHTML += "<div class='exercise'>" +
                                         "<p>"+ existing_workouts[i].exerciseName +"</p>" +
