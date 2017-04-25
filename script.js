@@ -42,20 +42,26 @@ var id = localStorage.getItem('id'),
     workoutBreak = document.getElementById('workout-break'),
     existingList = document.getElementById('existing_list');
 
-workoutName.innerHTML = workouts[id].name;
-workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
-workoutBreak.innerHTML = workouts[id].breakTime;
 
-for(var i =0; i <= workouts[id].exercises.length -1; i ++){
-    workoutExerciseList.innerHTML += "<div class='exercise'>" +
-                                        "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
-                                        "<div>" +
-                                            "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
-                                                "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
-                                            "</button>" +
-                                            "<span> secs</span>" + 
-                                        "</div>" + 
-                                    "</div>"
+console.log(existingList);
+
+if(workoutName){
+    
+    workoutName.innerHTML = workouts[id].name;
+    workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
+    workoutBreak.innerHTML = workouts[id].breakTime;
+
+    for(var i =0; i <= workouts[id].exercises.length -1; i ++){
+        workoutExerciseList.innerHTML += "<div class='exercise'>" +
+                                            "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
+                                            "<div>" +
+                                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
+                                                    "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
+                                                "</button>" +
+                                                "<span> secs</span>" + 
+                                            "</div>" + 
+                                        "</div>"
+    }
 }
 
 console.log(existing_workouts);
