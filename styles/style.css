@@ -39,7 +39,6 @@ a{
 
 .card-title {
     display: flex;
-    align-self: center;
     padding: 0;
     margin: 0 20px;
 }
