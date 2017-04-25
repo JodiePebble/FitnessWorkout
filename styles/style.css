@@ -114,6 +114,11 @@ footer {
     align-items: center
 }
 
+.create_card_inner > .confirm-btn{
+    height: auto;
+    padding: 0;
+}
+
 .create_card_inner > .card-info. card-title{
     display: flex;
     align-items: flex-start
