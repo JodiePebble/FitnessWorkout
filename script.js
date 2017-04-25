@@ -68,6 +68,7 @@ if(existingList){
     console.log(existing_workouts);
 
     for(var i =0; i <= existing_workouts -1; i ++){
+        console.log(existing_workouts[i].exerciseName);
         existingList.innerHTML += "<div class='exercise'>" +
                                         "<p>"+ existing_workouts[i].exerciseName +"</p>" +
                                         "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
