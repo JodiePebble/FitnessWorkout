@@ -187,6 +187,7 @@ input {
 .existing_list {
     border-bottom: none;
     overflow: auto;
+    margin: 0;
 }
 
 
