@@ -43,7 +43,6 @@ var id = localStorage.getItem('id'),
     existingList = document.getElementById('existing_list'),
     workoutNameInput = document.getElementById('workout_name-input');
 
-//workoutNameInput.addEventListener('onchange', updateLocal());
 
 if(workoutName){
     
@@ -77,7 +76,7 @@ if(existingList){
 }
 
 function updateLocal (){
-    console.log('hello');
+    console.log(workoutNameInput.innerHTML);
 }
 
 
