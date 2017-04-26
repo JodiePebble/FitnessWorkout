@@ -112,10 +112,12 @@ if(existingList){
     }
     
     for(var i = 0; i <= existing_workouts.length -1; i++){
+        
+        var name = existing_workouts[i].exerciseName;
         existingList.innerHTML += "<div class='exercise'>" +
                                         "<button on-click='displayOverlay()'>" +
                                             "<p>"+ existing_workouts[i].exerciseName +"</p>" +
-                                            "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting("+existing_workouts[i].exerciseName+")'>" +
+                                            "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting("+name+")'>" +
                                                 "<i class='material-icons'>&#xE147;</i>" +
                                             "</button>"+
                                         "</button>" + 
@@ -133,11 +135,11 @@ function displayOverlay() {
     overlay.addClass('hide-overlay');
 }
 
-function addJSON (){
+function addJSON(){
     workoutNameInput.value
 }
 
-function addExisting (exerciseName){
+function addExisting(exerciseName){
     console.log(exerciseName);
 }
 
