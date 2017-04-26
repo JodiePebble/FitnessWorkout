@@ -158,6 +158,7 @@ function addNew(){
                 "exerciseTime" : 30
             };
     exerciseList.push(newObj);
+    console.log(exerciseList);
 }
 
 
