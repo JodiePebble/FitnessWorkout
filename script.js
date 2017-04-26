@@ -166,12 +166,15 @@ function addExisting(exerciseID){
 }
 
 function addNew(){
-    var newObj = {
-                "exerciseName": newExerciseInput.value,
-                "exerciseTime" : 30
-            };
-    exerciseList.push(newObj);
-    updateDisplay();
+    
+    if(newExerciseInput.value != ''){
+        var newObj = {
+                    "exerciseName": newExerciseInput.value,
+                    "exerciseTime" : 30
+                };
+        exerciseList.push(newObj);
+        updateDisplay();
+    }
 }
 
 
