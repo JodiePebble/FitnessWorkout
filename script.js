@@ -170,6 +170,7 @@ function addExisting(exerciseID){
         exercise[i].style.display = 'none';
     }
     
+    localStorage.setItem('exercise_list', exerciseList);
     updateDisplay();
 }
 
@@ -180,6 +181,7 @@ function addNew(){
                     "exerciseTime" : 30
                 };
         exerciseList.push(newObj);
+        localStorage.setItem('exercise_list', exerciseList);
         updateDisplay();
     }
     newExerciseInput.value = '';
