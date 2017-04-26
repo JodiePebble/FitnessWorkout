@@ -127,6 +127,7 @@ if(existingList){
 }
 
 function updateDisplay(){
+    exerciseListArea.innerHTML = "";
     if(exerciseListArea){
         for(var i = 0; i <= exerciseList.length -1; i++){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
