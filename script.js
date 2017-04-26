@@ -113,7 +113,8 @@ if(existingList){
     }
     
     if(localStorage.getItem('exercise_list')){
-        exerciseListArea.innerHTML = JSON.parse(localStorage.getItem('exercise_list'));
+        console.log(JSON.parse(localStorage.getItem('exercise_list')));
+//        exerciseListArea.innerHTML = JSON.parse(localStorage.getItem('exercise_list'));
     }
     
     for(var i = 0; i <= existing_workouts.length -1; i++){
