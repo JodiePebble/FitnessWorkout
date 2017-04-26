@@ -115,7 +115,7 @@ if(existingList){
         existingList.innerHTML += "<div class='exercise'>" +
                                         "<button on-click='displayOverlay()'>" +
                                             "<p>"+ existing_workouts[i].exerciseName +"</p>" +
-                                            "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting('hello')'>" +
+                                            "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting("+i+")'>" +
                                                 "<i class='material-icons'>&#xE147;</i>" +
                                             "</button>"+
                                         "</button>" + 
