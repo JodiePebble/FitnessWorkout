@@ -201,5 +201,22 @@ function addNew(){
 }
 
 
+//WORKOUT TIMER
+
+function getTime(){
+    var time;
+    for(var i = 0; i <= workouts[id].exercises.length -1; i++){
+        workouts[id].exercises.exerciseTime
+        
+        time + workouts[id].exercises.exerciseTime
+        
+        console.log(time);
+    }
+}
+//get times
+
+//add together
+
+
 
 
