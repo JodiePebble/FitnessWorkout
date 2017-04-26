@@ -179,6 +179,8 @@ function addNew(){
         exerciseList.push(newObj);
         updateDisplay();
     }
+    
+    newExerciseInput.value = '';
 }
 
 
