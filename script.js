@@ -149,6 +149,10 @@ function displayOverlay() {
     overlay.addClass('hide-overlay');
 }
 
+function remove() {
+    localStorage.clear();
+}
+
 function addExisting(exerciseID){
     var exercise = document.getElementsByClassName('existing');
     
@@ -170,7 +174,6 @@ function addExisting(exerciseID){
 }
 
 function addNew(){
-    
     if(newExerciseInput.value != ''){
         var newObj = {
                     "exerciseName": newExerciseInput.value,
@@ -179,7 +182,6 @@ function addNew(){
         exerciseList.push(newObj);
         updateDisplay();
     }
-    
     newExerciseInput.value = '';
 }
 
