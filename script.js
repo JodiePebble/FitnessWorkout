@@ -92,7 +92,7 @@ if(workoutName){
 
     for(var i =0; i <= workouts[id].exercises.length -1; i ++){
         workoutExerciseList.innerHTML += "<div class='exercise'>" +
-                                            "<button>" +
+//                                            "<button>" +
                                             "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
                                             "<div>" +
                                                 "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
@@ -100,7 +100,7 @@ if(workoutName){
                                                 "</button>" +
                                                 "<span> secs</span>" + 
                                             "</div>" + 
-                                            "</button>" + 
+//                                            "</button>" + 
                                         "</div>"
     }
 }
@@ -108,10 +108,12 @@ if(workoutName){
 if(existingList){
     for(var i = 0; i <= existing_workouts.length -1; i++){
         existingList.innerHTML += "<div class='exercise'>" +
-                                        "<p>"+ existing_workouts[i].exerciseName +"</p>" +
-                                        "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
-                                            "<i class='material-icons'>&#xE147;</i>" +
-                                        "</button>"+
+                                        "<button>" +
+                                            "<p>"+ existing_workouts[i].exerciseName +"</p>" +
+                                            "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                                "<i class='material-icons'>&#xE147;</i>" +
+                                            "</button>"+
+                                        "</button>" + 
                                     "</div>"
     }
 }
