@@ -76,7 +76,7 @@ if(existingList){
 }
 
 function updateLocal (){
-    console.log(workoutNameInput.innerHTML);
+    console.log(workoutNameInput.value);
 }
 
 
