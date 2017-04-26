@@ -26,7 +26,7 @@ if(workoutsContainer){
         };
 }
 
-if(homeWorkoutsContainer || gymWorkoutsContainer){
+if(homeWorkoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
         console.log(workouts[i].homeOrGym);
         if(workouts[i].homeOrGym === 'home'){
@@ -45,6 +45,25 @@ if(homeWorkoutsContainer || gymWorkoutsContainer){
                                         "</div>";
             
         } else if(workouts[i].homeOrGym === 'gym'){
+             gymWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                                                "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
+                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                    "<div class='card-info'>" +
+                                                        "<p class='card-title'>"+ workouts[i].name + "</p>" +
+                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
+                                                    "</div>" +
+                                                    "<i class='material-icons'>&#xE147;</i>"+
+                                                "</a>"+
+                                            "</button>"+
+                                        "</div>";
+        }
+    }
+}
+
+if(gymWorkoutsContainer){
+    for(var i =0; i <= workouts.length -1; i ++){
+        if(workouts[i].homeOrGym === 'gym'){
              gymWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
