@@ -13,7 +13,22 @@ var workouts = [
         ],
         "breakTime" : 20,
         "homeOrGym" : "home",
-    }  
+    },
+    {
+        "name" : "Workout 2",
+        "exercises" : [
+            {
+                "exerciseName": "Tricep Curls",
+                "exerciseTime" : 30
+            },
+            {
+                "exerciseName": "Burpees",
+                "exerciseTime" : 30
+            }
+        ],
+        "breakTime" : 20,
+        "homeOrGym" : "gym",
+    } 
 ]
 
 var existing_workouts = [
