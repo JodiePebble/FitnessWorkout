@@ -113,8 +113,16 @@ if(existingList){
     }
     
     if(localStorage.getItem('exercise_list')){
-        console.log(JSON.parse(localStorage.getItem('exercise_list')));
-//        exerciseListArea.innerHTML = JSON.parse(localStorage.getItem('exercise_list'));
+        var array = JSON.parse(localStorage.getItem('exercise_list'));
+        
+        for(var i = 0; i <= array.length -1; i++){
+            exerciseListArea.innerHTML += "<div class='exercise'>" +
+                                                "<p>"+ array[i].exerciseName +"</p>"+ 
+                                                "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                                    "<i class='material-icons'>&#xE15C;</i>"+
+                                                "</button>"+
+                                            " </div>"
+        }
     }
     
     for(var i = 0; i <= existing_workouts.length -1; i++){
