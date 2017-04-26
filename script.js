@@ -6,13 +6,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-var obj = require('data.JSON');
-var fs = require('fs');  
-obj.newThing = '{"name" : "Workout 1 hello"}';
-fs.writeFile('data.JSON', JSON.stringify(obj), function (err) {
-  console.log(err);
-});
-
 var workoutsContainer = document.getElementById('workouts-content');
 if(workoutsContainer){
 
