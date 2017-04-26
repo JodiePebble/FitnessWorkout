@@ -215,9 +215,8 @@ function getTime(){
     }
     var breaks = count - 1;
     var addingBreaks = breaks * breaksTime;
-    
-    console.log(addingBreaks);
-    
+    var finalTime = addingBreaks + time;
+    console.log(finalTime);
     
 }
 //get times
