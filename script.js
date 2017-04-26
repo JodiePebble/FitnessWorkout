@@ -9,6 +9,8 @@ if ('serviceWorker' in navigator) {
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
+var overlay = document.getElementsByClassName('overlay');
+
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
@@ -108,7 +110,7 @@ if(workoutName){
 if(existingList){
     for(var i = 0; i <= existing_workouts.length -1; i++){
         existingList.innerHTML += "<div class='exercise'>" +
-                                        "<button>" +
+                                        "<button onclick="displayOverlay()">" +
                                             "<p>"+ existing_workouts[i].exerciseName +"</p>" +
                                             "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
                                                 "<i class='material-icons'>&#xE147;</i>" +
@@ -122,6 +124,10 @@ if(existingList){
 //CREATE NEW
 function updateLocal (){
     localStorage.setItem('workout_name', workoutNameInput.value);
+}
+
+function displayOverlay() {
+    overlay.style.display = 'block';
 }
 
 function addJSON (){

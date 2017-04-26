@@ -88,6 +88,11 @@ footer {
 
 /*Create new page*/
 
+.overlay{
+    width: 100px;
+    height: 100px;
+    display: none;
+}
 .main_card {
     display: flex;
 }
@@ -189,8 +194,6 @@ input {
     overflow: auto;
     margin: 0;
 }
-
-
 
 .time-section {
     margin-top: 15px
