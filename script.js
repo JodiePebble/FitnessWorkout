@@ -204,7 +204,7 @@ function addNew(){
 //WORKOUT TIMER
 
 function getTime(){
-    var time;
+    var time = 0;
     for(var i = 0; i <= workouts[id].exercises.length -1; i++){
         workouts[id].exercises.exerciseTime
         
