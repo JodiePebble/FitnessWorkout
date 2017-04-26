@@ -84,7 +84,8 @@ var id = localStorage.getItem('id'),
     workoutExerciseList = document.getElementById('workout-exercise-list'),
     workoutBreak = document.getElementById('workout-break'),
     existingList = document.getElementById('existing_list'),
-    workoutNameInput = document.getElementById('workout_name-input');
+    workoutNameInput = document.getElementById('workout_name-input'),
+    exerciseList = [];
 
 
 if(workoutName){
@@ -94,15 +95,13 @@ if(workoutName){
 
     for(var i =0; i <= workouts[id].exercises.length -1; i ++){
         workoutExerciseList.innerHTML += "<div class='exercise'>" +
-//                                            "<button>" +
                                             "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
                                             "<div>" +
                                                 "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
                                                     "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
                                                 "</button>" +
                                                 "<span> secs</span>" + 
-                                            "</div>" + 
-//                                            "</button>" + 
+                                            "</div>" +                                
                                         "</div>"
     }
 }
@@ -116,7 +115,7 @@ if(existingList){
         existingList.innerHTML += "<div class='exercise'>" +
                                         "<button on-click='displayOverlay()'>" +
                                             "<p>"+ existing_workouts[i].exerciseName +"</p>" +
-                                            "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                            "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting( "+existing_workouts[i].exerciseName +")'>" +
                                                 "<i class='material-icons'>&#xE147;</i>" +
                                             "</button>"+
                                         "</button>" + 
@@ -138,6 +137,9 @@ function addJSON (){
     workoutNameInput.value
 }
 
+function addExisting (exerciseName){
+    console.log(exerciseName);
+}
 
 
 
