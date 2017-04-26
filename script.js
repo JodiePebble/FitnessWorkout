@@ -6,6 +6,13 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+var obj = require('data.JSON');
+var fs = require('fs');  
+obj.newThing = '{"name" : "Workout 1 hello"}';
+fs.writeFile('data.JSON', JSON.stringify(obj), function (err) {
+  console.log(err);
+});
+
 var workoutsContainer = document.getElementById('workouts-content');
 if(workoutsContainer){
 
@@ -41,7 +48,8 @@ var id = localStorage.getItem('id'),
     workoutExerciseList = document.getElementById('workout-exercise-list'),
     workoutBreak = document.getElementById('workout-break'),
     existingList = document.getElementById('existing_list'),
-    workoutNameInput = document.getElementById('workout_name-input');
+    workoutNameInput = document.getElementById('workout_name-input'),
+    data = JSON.parse(data.JSON);
 
 
 if(workoutName){
@@ -77,6 +85,10 @@ if(existingList){
 //CREATE NEW
 function updateLocal (){
     localStorage.setItem('workout_name', workoutNameInput.value);
+}
+
+function addJSON (){
+    workoutNameInput.value
 }
 
 if(localStorage.getItem('workout_name')){
