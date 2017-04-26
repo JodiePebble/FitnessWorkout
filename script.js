@@ -208,7 +208,7 @@ function getTime(){
     for(var i = 0; i <= workouts[id].exercises.length -1; i++){
         console.log(workouts[id].exercises[i].exerciseTime);
         
-        time + workouts[id].exercises[i].exerciseTime
+        time = time + workouts[id].exercises[i].exerciseTime
         
         console.log(time);
     }
