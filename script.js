@@ -40,10 +40,10 @@ var id = localStorage.getItem('id'),
     workoutNumExercises = document.getElementById('workout-exercises'),
     workoutExerciseList = document.getElementById('workout-exercise-list'),
     workoutBreak = document.getElementById('workout-break'),
-    existingList = document.getElementById('existing_list');
+    existingList = document.getElementById('existing_list'),
+    workoutNameInput = document.getElementById('workout_name-input');
 
-
-console.log(existingList);
+workoutNameInput.addEventListener('change', updateLocal());
 
 if(workoutName){
     
