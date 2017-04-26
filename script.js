@@ -86,8 +86,8 @@ var id = localStorage.getItem('id'),
     existingList = document.getElementById('existing_list'),
     workoutNameInput = document.getElementById('workout_name-input'),
     exerciseList = [],
-    newExerciseInput = document.getElementById('new_exercise');
-
+    newExerciseInput = document.getElementById('new_exercise'),
+    exerciseListArea = document.getElementById('exercise_list');
 
 if(workoutName){
     workoutName.innerHTML = workouts[id].name;
@@ -123,6 +123,17 @@ if(existingList){
                                             "</button>"+
 //                                        "</button>" + 
                                     "</div>"
+    }
+}
+
+if(exerciseListArea){
+    for(var i = 0; i <= exerciseList.length -1; i++){
+        exerciseListArea.innerHTML += "<div class='exercise'>" +
+                                            "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
+                                            "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                                "<i class='material-icons'>&#xE15C;</i>"+
+                                            "</button>"+
+                                        " </div>"
     }
 }
 
