@@ -92,6 +92,7 @@ if(workoutName){
 
     for(var i =0; i <= workouts[id].exercises.length -1; i ++){
         workoutExerciseList.innerHTML += "<div class='exercise'>" +
+                                            "<button>" +
                                             "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
                                             "<div>" +
                                                 "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
@@ -99,6 +100,7 @@ if(workoutName){
                                                 "</button>" +
                                                 "<span> secs</span>" + 
                                             "</div>" + 
+                                            "</button>" + 
                                         "</div>"
     }
 }
