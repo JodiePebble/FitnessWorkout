@@ -76,10 +76,10 @@ if(existingList){
 }
 
 function updateLocal (){
-    console.log(workoutNameInput.value);
-    
     localStorage.setItem('workout_name', workoutNameInput.value);
 }
+
+console.log(localStorage.getItem('workout_name'));
 
 if(localStorage.getItem('workout_name')){
     workoutNameInput.value = localStorage.getItem('workout_name').value;
