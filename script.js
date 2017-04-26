@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
-var overlay = document.getElementsByClassName('overlay');
+var overlay = document.getElementById('overlay');
 
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
@@ -127,7 +127,7 @@ function updateLocal (){
 }
 
 function displayOverlay() {
-    overlay[0].style.display === "block";
+    overlay.style.display === "block";
 }
 
 function addJSON (){
