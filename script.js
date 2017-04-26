@@ -126,17 +126,18 @@ if(existingList){
     }
 }
 
-if(exerciseListArea){
-    for(var i = 0; i <= exerciseList.length -1; i++){
-        exerciseListArea.innerHTML += "<div class='exercise'>" +
-                                            "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
-                                            "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
-                                                "<i class='material-icons'>&#xE15C;</i>"+
-                                            "</button>"+
-                                        " </div>"
+function updateDisplay(){
+    if(exerciseListArea){
+        for(var i = 0; i <= exerciseList.length -1; i++){
+            exerciseListArea.innerHTML += "<div class='exercise'>" +
+                                                "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
+                                                "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                                    "<i class='material-icons'>&#xE15C;</i>"+
+                                                "</button>"+
+                                            " </div>"
+        }
     }
 }
-
 
 //CREATE NEW
 function updateLocal (){
@@ -148,7 +149,6 @@ function displayOverlay() {
 }
 
 function addExisting(exerciseID){
-    console.log(exerciseID);
     for(var i = 0; i <= existing_workouts.length -1; i++){
         if(exerciseID === i){
             
@@ -160,6 +160,8 @@ function addExisting(exerciseID){
             exerciseList.push(newObj);
         }
     }
+    
+    updateDisplay();
     console.log(exerciseList);
 }
 
@@ -169,6 +171,7 @@ function addNew(){
                 "exerciseTime" : 30
             };
     exerciseList.push(newObj);
+    updateDisplay();
     console.log(exerciseList);
 }
 
