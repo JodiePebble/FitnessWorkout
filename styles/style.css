@@ -93,6 +93,11 @@ footer {
     height: 100px;
     display: none;
 }
+
+.hide-overlay {
+    display: block;
+}
+
 .main_card {
     display: flex;
 }

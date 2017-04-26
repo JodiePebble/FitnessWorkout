@@ -127,7 +127,7 @@ function updateLocal (){
 }
 
 function displayOverlay() {
-    overlay.style.display === "block";
+    overlay.addClass('hide-overlay');
 }
 
 function addJSON (){
