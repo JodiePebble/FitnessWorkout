@@ -104,7 +104,7 @@ function addJSON (){
     workoutNameInput.value
 }
 
-if(localStorage.getItem('workout_name')){
-    workoutNameInput.value = localStorage.getItem('workout_name');
-}
+//if(localStorage.getItem('workout_name')){
+//    workoutNameInput.value = localStorage.getItem('workout_name');
+//}
 
