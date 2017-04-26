@@ -85,7 +85,8 @@ var id = localStorage.getItem('id'),
     workoutBreak = document.getElementById('workout-break'),
     existingList = document.getElementById('existing_list'),
     workoutNameInput = document.getElementById('workout_name-input'),
-    exerciseList = [];
+    exerciseList = [],
+    newExerciseInput = document.getElementById('new_exercise');
 
 
 if(workoutName){
@@ -135,16 +136,12 @@ function displayOverlay() {
     overlay.addClass('hide-overlay');
 }
 
-function addJSON(){
-    workoutNameInput.value
-}
-
 function addExisting(exerciseID){
     console.log(exerciseID);
     for(var i = 0; i <= existing_workouts.length -1; i++){
         if(exerciseID === i){
             
-            newObj = {
+            var newObj = {
                 "exerciseName": existing_workouts[i].exerciseName,
                 "exerciseTime" : 30
             };
@@ -152,9 +149,15 @@ function addExisting(exerciseID){
             exerciseList.push(newObj);
         }
     }
-    
     console.log(exerciseList);
+}
 
+function addNew(){
+    var newObj = {
+                "exerciseName": newExerciseInput.value,
+                "exerciseTime" : 30
+            };
+    exerciseList.push(newObj);
 }
 
 
