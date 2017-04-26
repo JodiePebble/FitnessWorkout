@@ -139,8 +139,22 @@ function addJSON(){
     workoutNameInput.value
 }
 
-function addExisting(exerciseName){
-    console.log(exerciseName);
+function addExisting(exerciseID){
+    console.log(exerciseID);
+    for(var i = 0; i <= existing_workouts.length -1; i++){
+        if(exerciseID === i){
+            
+            newObj = {
+                "exerciseName": existing_workouts[i].exerciseName,
+                "exerciseTime" : 30
+            };
+            
+            exerciseList.push(newObj);
+        }
+    }
+    
+    console.log(exerciseList);
+
 }
 
 
