@@ -82,6 +82,6 @@ function updateLocal (){
 console.log(localStorage.getItem('workout_name'));
 
 if(localStorage.getItem('workout_name')){
-    workoutNameInput.value = localStorage.getItem('workout_name').value;
+    workoutNameInput.value = localStorage.getItem('workout_name');
 }
 
