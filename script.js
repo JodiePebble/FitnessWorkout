@@ -41,8 +41,7 @@ var id = localStorage.getItem('id'),
     workoutExerciseList = document.getElementById('workout-exercise-list'),
     workoutBreak = document.getElementById('workout-break'),
     existingList = document.getElementById('existing_list'),
-    workoutNameInput = document.getElementById('workout_name-input'),
-    data = JSON.parse(data.JSON);
+    workoutNameInput = document.getElementById('workout_name-input');
 
 
 if(workoutName){
