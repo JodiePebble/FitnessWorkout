@@ -4,7 +4,7 @@ var CACHED_URLS = [
     BASE_PATH + 'create.html',
     BASE_PATH + 'homeWorkout.html',
     BASE_PATH + 'gymWorkout.html',
-    BASE_PATH + 'worko.html',
+    BASE_PATH + 'workout1.html',
     BASE_PATH + 'settings.html',
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
