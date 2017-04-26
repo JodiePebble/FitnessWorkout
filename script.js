@@ -27,6 +27,7 @@ if(workoutsContainer){
 
 if(homeWorkoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
+        console.log(workouts[i].homeOrGym);
         if(workouts[i].homeOrGym === 'home'){
             homeWorkoutsContainer +="<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
