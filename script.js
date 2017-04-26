@@ -127,7 +127,7 @@ function updateLocal (){
 }
 
 function displayOverlay() {
-    overlay.style.display === "block";
+    overlay[0].style.display === "block";
 }
 
 function addJSON (){
