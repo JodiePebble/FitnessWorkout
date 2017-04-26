@@ -45,7 +45,6 @@ var id = localStorage.getItem('id'),
 
 
 if(workoutName){
-    
     workoutName.innerHTML = workouts[id].name;
     workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
     workoutBreak.innerHTML = workouts[id].breakTime;
@@ -65,7 +64,6 @@ if(workoutName){
 
 if(existingList){
     for(var i = 0; i <= existing_workouts.length -1; i++){
-        console.log(i);
         existingList.innerHTML += "<div class='exercise'>" +
                                         "<p>"+ existing_workouts[i].exerciseName +"</p>" +
                                         "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
@@ -75,11 +73,11 @@ if(existingList){
     }
 }
 
+
+//CREATE NEW
 function updateLocal (){
     localStorage.setItem('workout_name', workoutNameInput.value);
 }
-
-console.log(localStorage.getItem('workout_name'));
 
 if(localStorage.getItem('workout_name')){
     workoutNameInput.value = localStorage.getItem('workout_name');
