@@ -206,9 +206,9 @@ function addNew(){
 function getTime(){
     var time = 0;
     for(var i = 0; i <= workouts[id].exercises.length -1; i++){
-        console.log(workouts[id].exercises.exerciseTime);
+        console.log(workouts[id].exercises[i].exerciseTime);
         
-        time + workouts[id].exercises.exerciseTime
+        time + workouts[id].exercises[i].exerciseTime
         
         console.log(time);
     }
