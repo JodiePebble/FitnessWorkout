@@ -205,13 +205,20 @@ function addNew(){
 
 function getTime(){
     var time = 0;
+    var count = 0;
     for(var i = 0; i <= workouts[id].exercises.length -1; i++){
-        console.log(workouts[id].exercises[i].exerciseTime);
-        
+        var breaksTime = workouts[id].breakTime;
         time = time + workouts[id].exercises[i].exerciseTime
+        count = count + 1;
+
         
-        console.log(time);
     }
+    var breaks = count - 1;
+    var addingBreaks = breaks * breaksTime;
+    
+    console.log(addingBreaks);
+    
+    
 }
 //get times
 
