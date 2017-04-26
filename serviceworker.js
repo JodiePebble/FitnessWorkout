@@ -4,7 +4,7 @@ var CACHED_URLS = [
     BASE_PATH + 'create.html',
     BASE_PATH + 'homeWokrkout.html',
     BASE_PATH + 'gymWorkout.html',
-    BASE_PATH + 'workout1.html',
+    BASE_PATH + 'worko.html',
     BASE_PATH + 'settings.html',
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
@@ -28,7 +28,7 @@ self.addEventListener('fetch', function(event) {
         if (response) {
           return response;
         } else if (event.request.headers.get('accept').includes('text/html')) {
-          return caches.match('index.html');
+          return caches.match('second.html');
         }
       });
     })
