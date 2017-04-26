@@ -151,6 +151,7 @@ function displayOverlay() {
 
 function remove() {
     localStorage.clear();
+    window.location.href = 'index.html';
 }
 
 function addExisting(exerciseID){
@@ -166,7 +167,6 @@ function addExisting(exerciseID){
             
             exerciseList.push(newObj);
         }
-        
         exercise[i].style.display = 'none';
     }
     
