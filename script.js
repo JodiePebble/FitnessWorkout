@@ -163,7 +163,6 @@ function addExisting(exerciseID){
     }
     
     updateDisplay();
-    console.log(exerciseList);
 }
 
 function addNew(){
@@ -173,7 +172,6 @@ function addNew(){
             };
     exerciseList.push(newObj);
     updateDisplay();
-    console.log(exerciseList);
 }
 
 
