@@ -77,6 +77,8 @@ if(existingList){
 
 function updateLocal (){
     console.log(workoutNameInput.value);
+    
+    localStorage.setItem('workout_name', workoutNameInput.value);
 }
 
 
