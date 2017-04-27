@@ -169,7 +169,7 @@ function remove() {
 }
 
 function add() {
-    var name = localStorage.getItem('workout_name'):
+    var name = localStorage.getItem('workout_name');
     var exercises = localStorage.getItem('exercise_list');
     
     var newWorkout = {
