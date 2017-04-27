@@ -240,9 +240,9 @@ function getTime(){
 }
 
 
-var count=30;
+var count=10;
 
-var counter=setInterval(timer, 1000);
+var counter = setInterval(timer, 1000);
 
 function timer(){
   count=count-1;
