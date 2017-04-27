@@ -168,7 +168,7 @@ function remove() {
     window.location.href = 'index.html';
 }
 
-function add() {
+function addWorkout() {
     var name = localStorage.getItem('workout_name');
     var exercises = localStorage.getItem('exercise_list');
     
