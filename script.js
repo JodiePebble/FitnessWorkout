@@ -155,7 +155,7 @@ function updateDisplay(){
 }
 
 //CREATE NEW
-function updateLocal (){
+function updateLocal(){
     localStorage.setItem('workout_name', workoutNameInput.value);
 }
 
