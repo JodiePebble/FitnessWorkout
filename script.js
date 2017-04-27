@@ -183,6 +183,9 @@ function addWorkout() {
     console.log(newWorkout);
     
     localWorkouts.push(newWorkout);
+    
+    localStorage.setItem('local_workouts', localWorkouts);
+
 }
 
 function addExisting(exerciseID){
