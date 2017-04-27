@@ -169,6 +169,7 @@ function remove() {
 }
 
 function addWorkout() {
+    console.log('hello');
     var name = localStorage.getItem('workout_name');
     var exercises = localStorage.getItem('exercise_list');
     
