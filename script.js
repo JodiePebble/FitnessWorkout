@@ -180,6 +180,8 @@ function addWorkout() {
         "homeOrGym" : "",
     }
     
+    console.log(newWorkout);
+    
     localWorkouts.push(newWorkout);
 }
 
