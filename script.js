@@ -88,7 +88,8 @@ var id = localStorage.getItem('id'),
     exerciseList = [],
     localWorkouts = [],
     newExerciseInput = document.getElementById('new_exercise'),
-    exerciseListArea = document.getElementById('exercise_list');
+    exerciseListArea = document.getElementById('exercise_list'),
+    timer = document.getElementById('timer-clock');
 
 if(workoutName){
     workoutName.innerHTML = workouts[id].name;
@@ -185,7 +186,6 @@ function addWorkout() {
     localWorkouts.push(newWorkout);
     
     localStorage.setItem('local_workouts', JSON.stringify(localWorkouts));
-
 }
 
 function addExisting(exerciseID){
@@ -237,6 +237,22 @@ function getTime(){
     var breaks = count - 1;
     var addingBreaks = breaks * breaksTime;
     finalTime = addingBreaks + time;    
+}
+
+
+var count=30;
+
+var counter=setInterval(timer, 1000);
+
+function timer(){
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+
+ timer.innerHTML=count + " secs"; // watch for spelling
 }
 
 
