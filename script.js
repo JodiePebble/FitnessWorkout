@@ -242,7 +242,7 @@ function getTime(){
 
 var count=10;
 
-var counter = setInterval(timer, 1000);
+//var counter = setInterval(timer, 1000);
 
 function timer(){
   count=count-1;
@@ -252,7 +252,7 @@ function timer(){
      return;
   }
 
- timer.innerHTML=count + " secs"; // watch for spelling
+ timer.innerHTML= count + " secs"; // watch for spelling
 }
 
 
