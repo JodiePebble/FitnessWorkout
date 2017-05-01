@@ -170,7 +170,6 @@ function remove() {
 }
 
 function addWorkout() {
-    console.log('hello');
     var name = localStorage.getItem('workout_name');
     var exercises = localStorage.getItem('exercise_list');
     
@@ -178,14 +177,15 @@ function addWorkout() {
         "name" : name,
         "exercises" : exercises,
         "breakTime" : 10,
-        "homeOrGym" : "",
+        "homeOrGym" : "home",
     }
-    
-    console.log(newWorkout);
     
     localWorkouts.push(newWorkout);
     
     localStorage.setItem('local_workouts', JSON.stringify(localWorkouts));
+    
+    localStorage.remove('workout_name');
+    localStorage.remove('exercise_list');
 }
 
 function addExisting(exerciseID){
@@ -215,7 +215,6 @@ function addNew(){
                     "exerciseTime" : 30
                 };
         exerciseList.push(newObj);
-        console.log(exerciseList);
         localStorage.setItem('exercise_list', JSON.stringify(exerciseList));
         updateDisplay();
     }
