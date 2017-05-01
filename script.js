@@ -12,6 +12,8 @@ var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 
 if(workoutsContainer){
+    var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
+
     for(var i =0; i <= workouts.length -1; i ++){
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
@@ -25,7 +27,22 @@ if(workoutsContainer){
                                                 "</a>"+
                                             "</button>"+
                                         "</div>";
-        };
+    };
+    
+    for(var i =0; i <= localGetWorkouts.length -1; i ++){
+        workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                                                "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
+                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                    "<div class='card-info'>" +
+                                                        "<p class='card-title'>"+ localGetWorkouts[i].name + "</p>" +
+                                                        "<p class='card-exercise'>"+ localGetWorkouts[i].exercises.length +  " execises</p>" +
+                                                    "</div>" +
+                                                    "<i class='material-icons'>&#xE147;</i>"+
+                                                "</a>"+
+                                            "</button>"+
+                                        "</div>";
+    };
 }
 
 if(homeWorkoutsContainer){
