@@ -215,6 +215,7 @@ function addNew(){
                     "exerciseTime" : 30
                 };
         exerciseList.push(newObj);
+        console.log(exerciseList);
         localStorage.setItem('exercise_list', JSON.stringify(exerciseList));
         updateDisplay();
     }
@@ -223,37 +224,37 @@ function addNew(){
 
 
 //WORKOUT TIMER
-var finalTime = 0;
-function getTime(){
-    var time = 0;
-    var count = 0;
-    for(var i = 0; i <= workouts[id].exercises.length -1; i++){
-        var breaksTime = workouts[id].breakTime;
-        time = time + workouts[id].exercises[i].exerciseTime
-        count = count + 1;
+//var finalTime = 0;
+//function getTime(){
+//    var time = 0;
+//    var count = 0;
+//    for(var i = 0; i <= workouts[id].exercises.length -1; i++){
+//        var breaksTime = workouts[id].breakTime;
+//        time = time + workouts[id].exercises[i].exerciseTime
+//        count = count + 1;
+//
+//        
+//    }
+//    var breaks = count - 1;
+//    var addingBreaks = breaks * breaksTime;
+//    finalTime = addingBreaks + time;    
+//}
 
-        
-    }
-    var breaks = count - 1;
-    var addingBreaks = breaks * breaksTime;
-    finalTime = addingBreaks + time;    
-}
 
-
-var count=10;
+//var count=10;
 
 //var counter = setInterval(timer, 1000);
 
-function timer(){
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     return;
-  }
-
- timer.innerHTML= count + " secs"; // watch for spelling
-}
+//function timer(){
+//  count=count-1;
+//  if (count <= 0)
+//  {
+//     clearInterval(counter);
+//     return;
+//  }
+//
+// timer.innerHTML= count + " secs"; // watch for spelling
+//}
 
 
 
