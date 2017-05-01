@@ -28,22 +28,24 @@ if(workoutsContainer){
                                             "</button>"+
                                         "</div>";
     };
-    
-    for(var j =0; j <= localGetWorkouts.length -1; j ++){
-        var exercises = JSON.parse(localGetWorkouts[j].exercises);
-        workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
-                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                                                "<a class='goToWorkout' id='"+ (j + workouts.length) +"' href='workout1.html'>" +
-                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
-                                                    "<div class='card-info'>" +
-                                                        "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
-                                                        "<p class='card-exercise'>"+ exercises.length +  " execises</p>" +
-                                                    "</div>" +
-                                                    "<i class='material-icons'>&#xE147;</i>"+
-                                                "</a>"+
-                                            "</button>"+
-                                        "</div>";
-    };
+    if(localGetWorkouts){
+
+        for(var j =0; j <= localGetWorkouts.length -1; j ++){
+            var exercises = JSON.parse(localGetWorkouts[j].exercises);
+            workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+                                                "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                                                    "<a class='goToWorkout' id='"+ (j + workouts.length) +"' href='workout1.html'>" +
+                                                        "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                        "<div class='card-info'>" +
+                                                            "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
+                                                            "<p class='card-exercise'>"+ exercises.length +  " execises</p>" +
+                                                        "</div>" +
+                                                        "<i class='material-icons'>&#xE147;</i>"+
+                                                    "</a>"+
+                                                "</button>"+
+                                            "</div>";
+        };
+    }
 }
 
 if(homeWorkoutsContainer){
