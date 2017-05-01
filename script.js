@@ -109,7 +109,7 @@ var id = localStorage.getItem('id'),
     timer = document.getElementById('timer-clock');
 
 if(workoutName){
-    workoutName.innerHTML = workouts[id].name || localGetWorkouts[(id - workouts.length)].name;
+    workoutName.innerHTML = workouts[id].name;
     workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
     workoutBreak.innerHTML = workouts[id].breakTime;
 
