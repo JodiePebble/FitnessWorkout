@@ -15,6 +15,7 @@ if(workoutsContainer){
     var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
     for(var i =0; i <= workouts.length -1; i ++){
+        
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
@@ -30,13 +31,14 @@ if(workoutsContainer){
     };
     
     for(var i =0; i <= localGetWorkouts.length -1; i ++){
+        var exercises = JSON.parse(localGetWorkouts[i].exercises);
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
                                                     "<i class='material-icons card-icon'>&#xE853;</i>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ localGetWorkouts[i].name + "</p>" +
-                                                        "<p class='card-exercise'>"+ localGetWorkouts[i].exercises.length +  " execises</p>" +
+                                                        "<p class='card-exercise'>"+ exercises.length +  " execises</p>" +
                                                     "</div>" +
                                                     "<i class='material-icons'>&#xE147;</i>"+
                                                 "</a>"+
@@ -239,42 +241,3 @@ function addNew(){
     }
     newExerciseInput.value = '';
 }
-
-
-//WORKOUT TIMER
-//var finalTime = 0;
-//function getTime(){
-//    var time = 0;
-//    var count = 0;
-//    for(var i = 0; i <= workouts[id].exercises.length -1; i++){
-//        var breaksTime = workouts[id].breakTime;
-//        time = time + workouts[id].exercises[i].exerciseTime
-//        count = count + 1;
-//
-//        
-//    }
-//    var breaks = count - 1;
-//    var addingBreaks = breaks * breaksTime;
-//    finalTime = addingBreaks + time;    
-//}
-
-
-//var count=10;
-
-//var counter = setInterval(timer, 1000);
-
-//function timer(){
-//  count=count-1;
-//  if (count <= 0)
-//  {
-//     clearInterval(counter);
-//     return;
-//  }
-//
-// timer.innerHTML= count + " secs"; // watch for spelling
-//}
-
-
-
-
-
