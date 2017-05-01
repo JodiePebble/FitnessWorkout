@@ -10,10 +10,9 @@ var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
+var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
 if(workoutsContainer){
-    var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
-
     for(var i =0; i <= workouts.length -1; i ++){
         
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
@@ -50,7 +49,6 @@ if(workoutsContainer){
 if(homeWorkoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
         if(workouts[i].homeOrGym === 'home'){
-            console.log(workouts[i].homeOrGym);
             homeWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
@@ -111,7 +109,7 @@ var id = localStorage.getItem('id'),
     timer = document.getElementById('timer-clock');
 
 if(workoutName){
-    workoutName.innerHTML = workouts[id].name;
+    workoutName.innerHTML = workouts[id].name || localGetWorkouts[(id - workouts.length)].name;
     workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
     workoutBreak.innerHTML = workouts[id].breakTime;
 
