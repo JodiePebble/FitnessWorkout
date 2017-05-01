@@ -184,8 +184,8 @@ function addWorkout() {
     
     localStorage.setItem('local_workouts', JSON.stringify(localWorkouts));
     
-    localStorage.remove('workout_name');
-    localStorage.remove('exercise_list');
+    localStorage.removeItem('workout_name');
+    localStorage.removeItem('exercise_list');
 }
 
 function addExisting(exerciseID){
