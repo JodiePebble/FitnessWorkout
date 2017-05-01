@@ -12,7 +12,9 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js',
     BASE_PATH + 'scripts/mdl/bower.json',
-    BASE_PATH + 'scripts/mdl/package.json'
+    BASE_PATH + 'scripts/mdl/package.json',
+    'https://fonts.googleapis.com/icon?family=Material+Icons',
+    "https://code.getmdl.io/1.3.0/material.light_blue-pink.min.css";
 ];
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
 
