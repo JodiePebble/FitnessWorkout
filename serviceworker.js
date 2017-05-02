@@ -2,6 +2,7 @@ var BASE_PATH = '/FitnessWorkout/';
 var CACHE_NAME = 'gih-cache-v1';
 var CACHED_URLS = [
     BASE_PATH + 'create.html',
+    BASE_PATH + 'index.html',
     BASE_PATH + 'homeWorkout.html',
     BASE_PATH + 'gymWorkout.html',
     BASE_PATH + 'workout1.html',
@@ -16,13 +17,13 @@ var CACHED_URLS = [
     BASE_PATH + 'colour.css'
 ];
 
-//self.addEventListener('install', function(event) {
-//  event.waitUntil(
-//    caches.open(CACHE_NAME).then(function(cache) {
-//      return cache.addAll(CACHED_URLS);
-//    })
-//  );
-//});
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(function(cache) {
+      return cache.addAll(CACHED_URLS);
+    })
+  );
+});
 
 self.addEventListener('fetch', function(event) {
   var requestURL = new URL(event.request.url);
