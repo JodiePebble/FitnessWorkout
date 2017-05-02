@@ -242,6 +242,6 @@ input {
 
 /*SETTINGS*/
 
-.settings-main > .page-content > #offline-map-info{
+.card > #offline-map-info{
     display: none;
 }
