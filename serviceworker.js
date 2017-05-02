@@ -13,6 +13,7 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.js',
     BASE_PATH + 'scripts/mdl/bower.json',
     BASE_PATH + 'scripts/mdl/package.json',
+    BASE_PATH + 'colour.css',
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     "https://code.getmdl.io/1.3.0/material.light_blue-pink.min.css";
 ];
@@ -42,7 +43,7 @@ self.addEventListener('fetch', function(event) {
       })
     );
       
-      } else if (requestURL.pathname === BASE_PATH + 'second.html') {
+  } else if (requestURL.pathname === BASE_PATH + 'second.html') {
     event.respondWith(
       caches.open(CACHE_NAME).then(function(cache) {
         return cache.match('second.html').then(function(cachedResponse) {
