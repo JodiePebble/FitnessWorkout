@@ -35,7 +35,7 @@ function initMap() {
             map: map
         });
     }
-}
+};
 
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
