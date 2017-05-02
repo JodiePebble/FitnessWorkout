@@ -20,7 +20,6 @@ var CACHED_URLS = [
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
 
-
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
