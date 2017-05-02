@@ -12,7 +12,7 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js',
     BASE_PATH + 'scripts/mdl/bower.json',
-    BASE_PATH + 'scripts/mdl/package.json';
+    BASE_PATH + 'scripts/mdl/package.json'
 ];
 
 //self.addEventListener('install', function(event) {
