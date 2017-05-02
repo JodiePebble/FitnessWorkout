@@ -9,7 +9,9 @@ if ('serviceWorker' in navigator) {
 var locations = [
       ['Staffordshire University Gym', 53.008328, -2.175744, 4],
       ['24/7 Gym', 53.022167, -2.172589, 5],
-      ['Exercise 4 Less', 53.000271, -2.156281, 3]
+      ['Exercise 4 Less', 53.000271, -2.156281, 3],
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
     ];
 
 function initMap() {
