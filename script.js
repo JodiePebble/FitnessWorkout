@@ -6,6 +6,18 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+function initMap() {
+    var myLocation = {lat: 53.0103798, lng: -2.1801833};
+    var map = new google.maps.Map(document.getElementById('map-container'), {
+        zoom: 2,
+        center: myLocation
+    });
+    var marker = new google.maps.Marker({
+        position: myLocation,
+        map: map
+    });
+}
+
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
