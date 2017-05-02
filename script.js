@@ -7,11 +7,10 @@ if ('serviceWorker' in navigator) {
 }
 
 var locations = [
-      ['Bondi Beach', -33.890542, 151.274856, 4],
-      ['Coogee Beach', -33.923036, 151.259052, 5],
-      ['Cronulla Beach', -34.028249, 151.157507, 3],
-      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-      ['Maroubra Beach', -33.950198, 151.259302, 1]
+      ['Staffordshire University Gym', 53.009309, -2.173533, 4],
+      ['24/7 Fitness', 53.027045, -2.175443, 3],
+      ['Exercise 4 Less', 53.003318, -2.186837, 2],
+      ['The Gym', 53.019275, -2.181602, 1]
     ];
 
 function initMap() {
