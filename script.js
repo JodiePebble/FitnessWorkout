@@ -15,8 +15,6 @@ var locations = [
     ];
 
 function initMap() {
-    
-    
     var map = new google.maps.Map(document.getElementById('map-container'), {
         zoom: 4,
         center: {lat: 53.0103798, lng: -2.1801833}
@@ -25,7 +23,7 @@ function initMap() {
     var marker, i;
     
     marker = new google.maps.Marker({
-        position: myLocation,
+        position: {lat: 53.0103798, lng: -2.1801833}, 
         map: map
     });
 
