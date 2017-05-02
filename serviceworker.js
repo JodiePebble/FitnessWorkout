@@ -54,18 +54,7 @@ self.addEventListener('fetch', function(event) {
         });
       })
     );
-//    } else if (requestURL.pathname === BASE_PATH + 'second.html') {
-//        event.respondWith(
-//          caches.open(CACHE_NAME).then(function(cache) {
-//            return cache.match('second.html').then(function(cachedResponse) {
-//              var fetchPromise = fetch('second.html').then(function(networkResponse) {
-//                cache.put('second.html', networkResponse.clone());
-//                return networkResponse;
-//              });
-//              return cachedResponse || fetchPromise;
-//            });
-//          })
-//        );
+  }
 //
 //    // Handle requests for Google Maps JavaScript API file
 //    } else if (requestURL.href === googleMapsAPIJS) {
@@ -89,4 +78,18 @@ self.addEventListener('fetch', function(event) {
 //      })
 //    );
 //  }
-}});
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheName.startsWith('gih-cache') && CACHE_NAME !== cacheName) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
