@@ -6,8 +6,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
-
 var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
       ['Coogee Beach', -33.923036, 151.259052, 5],
@@ -18,19 +16,18 @@ var locations = [
 
 function initMap() {
     var myLocation = {lat: 53.0103798, lng: -2.1801833};
+    var marker, i;
     
     var map = new google.maps.Map(document.getElementById('map-container'), {
         zoom: 4,
         center: myLocation
     });
     
-    var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: myLocation,
         map: map
     });
-    
-    var marker, i;
-    
+
     for (i = 0; i < locations.length; i++) { 
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
