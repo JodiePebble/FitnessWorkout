@@ -1,6 +1,8 @@
 var BASE_PATH = '/FitnessWorkout/';
 var CACHE_NAME = 'gih-cache-v1';
 var CACHED_URLS = [
+    
+    //HTML files
     BASE_PATH + 'create.html',
     BASE_PATH + 'index.html',
     BASE_PATH + 'homeWorkout.html',
@@ -9,15 +11,17 @@ var CACHED_URLS = [
     BASE_PATH + 'settings.html',
     BASE_PATH + 'second.html',
     
+    // Data and JSON files
     BASE_PATH + 'data.JSON',
     BASE_PATH + 'script.js',
     BASE_PATH + 'offline-map.js',
-    
+    BASE_PATH + 'scripts/mdl/package.json',
+
+    // Styles
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js',
     BASE_PATH + 'scripts/mdl/bower.json',
-    BASE_PATH + 'scripts/mdl/package.json',
     BASE_PATH + 'colour.css'
 ];
 

@@ -40,20 +40,17 @@ var existing_workouts = [
 var gyms = [
     {
         "name": "24/7 Gym",
-        "position" : "",
         "address" : "",
-        "opening times" : ""
+        "openingTimes" : ""
     },
     {
         "name": "The Gym",
-        "position" : "",
         "address" : "",
-        "opening times" : ""
+        "openingTimes" : ""
     },
     {
         "name": "Exercise 4 Less",
-        "position" : "",
         "address" : "",
-        "opening times" : ""
+        "openingTimes" : ""
     },
 ]
