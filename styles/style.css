@@ -242,6 +242,6 @@ input {
 
 /*SETTINGS*/
 
-.card > #offline-map-info{
+.card > #offline-map-container{
     display: none;
 }
