@@ -12,11 +12,8 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js',
     BASE_PATH + 'scripts/mdl/bower.json',
-    BASE_PATH + 'scripts/mdl/package.json',
-    'https://fonts.googleapis.com/icon?family=Material+Icons',
-    "https://code.getmdl.io/1.3.0/material.light_blue-pink.min.css";
+    BASE_PATH + 'scripts/mdl/package.json'
 ];
-var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -27,69 +24,15 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  var requestURL = new URL(event.request.url);
-  // Handle requests for index.html
-  if (requestURL.pathname === BASE_PATH + 'index.html') {
-    event.respondWith(
-      caches.open(CACHE_NAME).then(function(cache) {
-        return cache.match('index.html').then(function(cachedResponse) {
-          var fetchPromise = fetch('index.html').then(function(networkResponse) {
-            cache.put('index.html', networkResponse.clone());
-            return networkResponse;
-          });
-          return cachedResponse || fetchPromise;
-        });
-      })
-    );
-      
-  } else if (requestURL.pathname === BASE_PATH + 'second.html') {
-    event.respondWith(
-      caches.open(CACHE_NAME).then(function(cache) {
-        return cache.match('second.html').then(function(cachedResponse) {
-          var fetchPromise = fetch('second.html').then(function(networkResponse) {
-            cache.put('second.html', networkResponse.clone());
-            return networkResponse;
-          });
-          return cachedResponse || fetchPromise;
-        });
-      })
-    );
-  }
-//
-//    // Handle requests for Google Maps JavaScript API file
-//    } else if (requestURL.href === googleMapsAPIJS) {
-//        event.respondWith(
-//          fetch(
-//            googleMapsAPIJS+'&'+Date.now(),
-//            { mode: 'no-cors', cache: 'no-store' }
-//          ).catch(function() {
-//            return caches.match('offline-map.js');
-//          })
-//        );
-//    } else if (
-//        CACHED_URLS.includes(requestURL.href) ||
-//        CACHED_URLS.includes(requestURL.pathname)
-//    ) {
-//    event.respondWith(
-//      caches.open(CACHE_NAME).then(function(cache) {
-//        return cache.match(event.request).then(function(response) {
-//          return response || fetch(event.request);
-//        });
-//      })
-//    );
-//  }
-});
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheName.startsWith('gih-cache') && CACHE_NAME !== cacheName) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
+  event.respondWith(
+    fetch(event.request).catch(function() {
+      return caches.match(event.request).then(function(response) {
+        if (response) {
+          return response;
+        } else if (event.request.headers.get('accept').includes('text/html')) {
+          return caches.match('second.html');
+        }
+      });
     })
   );
 });
