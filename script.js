@@ -24,16 +24,24 @@ function initMap() {
         position: myLocation,
         map: map
     });
-}
-
+    
 var marker, i;
-
-for (i = 0; i < locations.length; i++) { 
+    for (i = 0; i < locations.length; i++) { 
     marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
     });
 }
+}
+
+//var marker, i;
+//
+//for (i = 0; i < locations.length; i++) { 
+//    marker = new google.maps.Marker({
+//        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+//        map: map
+//    });
+//}
 
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
