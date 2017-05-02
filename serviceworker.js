@@ -65,7 +65,6 @@ self.addEventListener('fetch', function(event) {
             googleMapsAPIJS+'&'+Date.now(),
             { mode: 'no-cors', cache: 'no-store' }
         ).catch(function() {
-            console.log('hello');
             return caches.match('offline-map.js');
         })
     );
