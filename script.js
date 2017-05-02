@@ -15,13 +15,14 @@ var locations = [
     ];
 
 function initMap() {
-    var myLocation = {lat: 53.0103798, lng: -2.1801833};
-    var marker, i;
+    
     
     var map = new google.maps.Map(document.getElementById('map-container'), {
         zoom: 4,
-        center: myLocation
+        center: {lat: 53.0103798, lng: -2.1801833}
     });
+    
+    var marker, i;
     
     marker = new google.maps.Marker({
         position: myLocation,
