@@ -8,9 +8,11 @@ var CACHED_URLS = [
     BASE_PATH + 'workout1.html',
     BASE_PATH + 'settings.html',
     BASE_PATH + 'second.html',
+    
     BASE_PATH + 'data.JSON',
     BASE_PATH + 'script.js',
     BASE_PATH + 'offline-map.js',
+    
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js',
@@ -62,8 +64,10 @@ self.addEventListener('fetch', function(event) {
   } else if (requestURL.href === googleMapsAPIJS) {
     event.respondWith(
         fetch(
-            googleMapsAPIJS+'&'+Date.now(),
-            { mode: 'no-cors', cache: 'no-store' }
+            googleMapsAPIJS+'&'+Date.now(),{
+                mode: 'no-cors', 
+                cache: 'no-store' 
+            }
         ).catch(function() {
             return caches.match('offline-map.js');
         })
