@@ -13,7 +13,6 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.js',
     BASE_PATH + 'scripts/mdl/bower.json',
     BASE_PATH + 'scripts/mdl/package.json',
-    BASE_PATH + 'colour.css',
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     "https://code.getmdl.io/1.3.0/material.light_blue-pink.min.css";
 ];
