@@ -242,8 +242,6 @@ input {
 
 /*SETTINGS*/
 
-h4{
-    margin: 0;
-    padding: 10px;
-    border-bottom: 1px solid #424242;
+.page-content > #offline-map-info{
+    display: none;
 }
