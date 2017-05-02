@@ -10,7 +10,7 @@ var CACHED_URLS = [
     BASE_PATH + 'second.html',
     BASE_PATH + 'data.JSON',
     BASE_PATH + 'script.js',
-    BASE_PATH + 'offline-map.js',
+//    BASE_PATH + 'offline-map.js',
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js',
