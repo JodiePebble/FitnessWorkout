@@ -36,3 +36,24 @@ var existing_workouts = [
         "exerciseName": "Burpees",
     }
 ]
+
+var gyms = [
+    {
+        "name": "24/7 Gym",
+        "position" : "",
+        "address" : "",
+        "opening times" : ""
+    },
+    {
+        "name": "The Gym",
+        "position" : "",
+        "address" : "",
+        "opening times" : ""
+    },
+    {
+        "name": "Exercise 4 Less",
+        "position" : "",
+        "address" : "",
+        "opening times" : ""
+    },
+]

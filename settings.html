@@ -47,13 +47,22 @@
                         <h4>Your Local Gyms</h4>
                     </div>
                     
-                    <div> 
-                        <label>
-                            Home Postcode
-                        </label>
-                        <input/>
-                    
-                    </div>
+                    <div id="map-container" style="height: 300px;"></div>
+                    <script>
+                        function initMap() {
+                            var myLocation = {lat: 53.0103798, lng: -2.1801833};
+                            var map = new google.maps.Map(document.getElementById('map-container'), {
+                            zoom: 2,
+                            center: myLocation
+                        });
+                        var marker = new google.maps.Marker({
+                        position: myLocation,
+                        map: map
+                    });
+                }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap">
+                </script>
                 </div>
             </div>
         </main>

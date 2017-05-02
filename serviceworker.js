@@ -18,6 +18,9 @@ var CACHED_URLS = [
     BASE_PATH + 'colour.css'
 ];
 
+var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
+
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
@@ -54,6 +57,18 @@ self.addEventListener('fetch', function(event) {
         });
       })
     );
+  
+      // Handle requests for Google Maps JavaScript API file
+  } else if (requestURL.href === googleMapsAPIJS) {
+    event.respondWith(
+        fetch(
+            googleMapsAPIJS+'&'+Date.now(),
+            { mode: 'no-cors', cache: 'no-store' }
+        ).catch(function() {
+            return caches.match('offline-map.js');
+        })
+    );
+      
   } else if (
     CACHED_URLS.includes(requestURL.href) ||
     CACHED_URLS.includes(requestURL.pathname)
