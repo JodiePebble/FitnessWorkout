@@ -59,17 +59,16 @@ self.addEventListener('fetch', function(event) {
     );
   
       // Handle requests for Google Maps JavaScript API file
-  } else if (requestURL.href === googleMapsAPIJS) {
-    event.respondWith(
-        fetch(
-            googleMapsAPIJS+'&'+Date.now(),
-            { mode: 'no-cors', cache: 'no-store' }
-        ).catch(function() {
-            console.log('hello');
-            return caches.match('offline-map.js');
-        })
-    );
-      
+//  } else if (requestURL.href === googleMapsAPIJS) {
+//    event.respondWith(
+//        fetch(
+//            googleMapsAPIJS+'&'+Date.now(),
+//            { mode: 'no-cors', cache: 'no-store' }
+//        ).catch(function() {
+//            return caches.match('offline-map.js');
+//        })
+//    );
+//      
   } else if (
     CACHED_URLS.includes(requestURL.href) ||
     CACHED_URLS.includes(requestURL.pathname)
