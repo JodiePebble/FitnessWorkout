@@ -1,2 +1,2 @@
 document.getElementById('map-container').style.display = 'none';
-document.getElementById('offline-map-info').style.display = 'block';
+document.getElementById('offline-map-container').style.display = 'block';
