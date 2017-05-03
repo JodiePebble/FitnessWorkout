@@ -250,5 +250,5 @@ input {
 }
 
 .card > div > .gym-title > #map-container{
-    padding: 5px;
+    max-width: 500px;
 }
