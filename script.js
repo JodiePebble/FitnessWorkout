@@ -191,7 +191,7 @@ function updateDisplay(){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                                                 "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
                                                 "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
-                                                    "<i class='material-icons'>&#xE15C;</i>"+
+                                                   " <image class='material-icons' src='appImages/add_circle_black.png'></image>"+
                                                 "</button>"+
                                             " </div>"
         }
