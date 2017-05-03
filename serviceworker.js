@@ -19,7 +19,6 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/bower.json',
     BASE_PATH + 'manifest.json',
     
-    
     // Styles
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
