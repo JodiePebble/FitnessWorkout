@@ -21,7 +21,7 @@ var CACHED_URLS = [
     // Styles
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
-    BASE_PATH + 'scripts/mdl/material.min.js'
+    BASE_PATH + 'scripts/mdl/material.min.js',
     
     //Images
     BASE_PATH + 'appImages/home_black.png',
