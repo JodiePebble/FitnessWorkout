@@ -245,10 +245,10 @@ input {
     display: none;
 }
 
-.card > div > div > .gym-title {
+.card > div > .containers > .gym-title {
     padding: 15px;
 }
 
-.card > div > div > .gym-title > #map-container{
+.card > div > .containers > .gym-title > #map-container{
     max-width: 500px;
 }
