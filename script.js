@@ -164,7 +164,7 @@ if(existingList){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                                                 "<p>"+ array[i].exerciseName +"</p>"+ 
                                                 "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
-                                                    "<i class='material-icons'>&#xE15C;</i>"+
+                                                    " <image class='material-icons' src='appImages/remove_circle_black'></image>"+
                                                 "</button>"+
                                             " </div>"
         }

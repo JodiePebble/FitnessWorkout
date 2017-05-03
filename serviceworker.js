@@ -42,7 +42,6 @@ var CACHED_URLS = [
     
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     
-    
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
