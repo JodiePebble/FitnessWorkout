@@ -17,7 +17,6 @@ a{
 .page-content{
     text-align: '-webkit-center';
 }
-
 .card{
     margin: 10px;
     background: #ffffff;
@@ -245,14 +244,10 @@ input {
 
 /*SETTINGS*/
 
-.card > #offline-map-container{
+.card > .containers > #offline-map-container{
     display: none;
 }
 
-.card > div > .containers > .gym-title {
+.card > .containers > #offline-map-container > .gym-title {
     padding: 15px;
-}
-
-.card > div > .containers > .gym-title > #map-container{
-    max-width: 500px;
 }
