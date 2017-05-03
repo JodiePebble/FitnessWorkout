@@ -85,7 +85,6 @@ if(homeWorkoutsContainer){
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                                         "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
                                                     "</div>" +
-                                                    "<i class='material-icons'>&#xE147;</i>"+
                                                 "</a>"+
                                             "</button>"+
                                         "</div>";
@@ -105,7 +104,6 @@ if(gymWorkoutsContainer){
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                                         "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
                                                     "</div>" +
-                                                    "<i class='material-icons'>&#xE147;</i>"+
                                                 "</a>"+
                                             "</button>"+
                                         "</div>";
