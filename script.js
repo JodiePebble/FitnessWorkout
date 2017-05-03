@@ -46,7 +46,7 @@ if(workoutsContainer){
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                    "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                                         "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
@@ -63,7 +63,7 @@ if(workoutsContainer){
             workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                                 "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                     "<a class='goToWorkout' id='"+ (j + workouts.length) +"' href='workout1.html'>" +
-                                                        "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                        "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                         "<div class='card-info'>" +
                                                             "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
                                                             "<p class='card-exercise'>"+ exercises.length +  " execises</p>" +
@@ -82,7 +82,7 @@ if(homeWorkoutsContainer){
             homeWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                    "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                                         "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
@@ -102,7 +102,7 @@ if(gymWorkoutsContainer){
              gymWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                                                 "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                                                    "<i class='material-icons card-icon'>&#xE853;</i>" +
+                                                    "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                                         "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
