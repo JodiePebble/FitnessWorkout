@@ -245,6 +245,6 @@ input {
     display: none;
 }
 
-.card > .gym-title {
+.card > div > .gym-title {
     padding: 15px;
 }
