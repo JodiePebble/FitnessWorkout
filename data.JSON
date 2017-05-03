@@ -40,8 +40,8 @@ var existing_workouts = [
 var gyms = [
     {
         "name": "Staffordshire University Gym",
-        "address" : "",
-        "openingTimes" : ""
+        "address" : "Staffordshire University, 80 Leek Rd, Stoke-on-Trent ST4 2YJ",
+        "openingTimes" : "7am - 10pm"
     },
     {
         "name": "24/7 Gym",
