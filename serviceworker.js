@@ -24,7 +24,7 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.js'
     
     //Images
-    BASE_PATH + 'appImages/home_black.jpg',
+    BASE_PATH + 'appImages/home_black.png',
     BASE_PATH + 'appImages/favicon.ico',
     BASE_PATH + 'appImages/favicon-16x16.png',
     BASE_PATH + 'appImages/favicon-32x32.png',
