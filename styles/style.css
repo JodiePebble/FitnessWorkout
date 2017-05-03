@@ -25,7 +25,8 @@ a{
 }
 
 .card > button{
-    height: 65px
+    height: 65px;
+    max-width: 300px
 }
 
 .card > a > .card-info > p{
@@ -244,10 +245,10 @@ input {
     display: none;
 }
 
-.card > div > .gym-title {
+.card > div > div > .gym-title {
     padding: 15px;
 }
 
-.card > div > .gym-title > #map-container{
+.card > div > div > .gym-title > #map-container{
     max-width: 500px;
 }
