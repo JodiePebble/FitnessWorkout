@@ -46,16 +46,16 @@ var gyms = [
     {
         "name": "24/7 Gym",
         "address" : "",
-        "openingTimes" : ""
+        "openingTimes" : "24/7"
     },
     {
         "name": "The Gym",
         "address" : "",
-        "openingTimes" : ""
+        "openingTimes" : "24/7"
     },
     {
         "name": "Exercise 4 Less",
         "address" : "",
-        "openingTimes" : ""
+        "openingTimes" : "7am - 10pm"
     },
 ]
