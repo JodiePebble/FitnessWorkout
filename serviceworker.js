@@ -22,6 +22,18 @@ var CACHED_URLS = [
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
     BASE_PATH + 'scripts/mdl/material.min.js'
+    
+    //Images
+    BASE_PATH + 'images/home_black.jpg',
+    BASE_PATH + 'appimages/favicon.ico',
+    BASE_PATH + 'appimages/favicon-16x16.png',
+    BASE_PATH + 'appimages/favicon-32x32.png',
+    BASE_PATH + 'appimages/favicon-96x96.png',
+    BASE_PATH + 'appimages/ms-icon-70x70.png',
+    BASE_PATH + 'appimages/ms-icon-144x144.png',
+    BASE_PATH + 'appimages/ms-icon-150x150.png',
+    BASE_PATH + 'appimages/ms-icon-310x310.png',
+    
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
