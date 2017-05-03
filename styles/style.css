@@ -18,6 +18,7 @@ a{
     margin: 10px;
     background: #ffffff;
     border-radius: 4px;
+    max-height: 500px
 }
 
 .create_card{
@@ -26,7 +27,6 @@ a{
 
 .card > button{
     height: 65px;
-    max-width: 300px
 }
 
 .card > a > .card-info > p{
