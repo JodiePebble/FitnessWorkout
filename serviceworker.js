@@ -24,15 +24,15 @@ var CACHED_URLS = [
     BASE_PATH + 'scripts/mdl/material.min.js'
     
     //Images
-    BASE_PATH + 'images/home_black.jpg',
-    BASE_PATH + 'appimages/favicon.ico',
-    BASE_PATH + 'appimages/favicon-16x16.png',
-    BASE_PATH + 'appimages/favicon-32x32.png',
-    BASE_PATH + 'appimages/favicon-96x96.png',
-    BASE_PATH + 'appimages/ms-icon-70x70.png',
-    BASE_PATH + 'appimages/ms-icon-144x144.png',
-    BASE_PATH + 'appimages/ms-icon-150x150.png',
-    BASE_PATH + 'appimages/ms-icon-310x310.png',
+    BASE_PATH + 'appImages/home_black.jpg',
+    BASE_PATH + 'appImages/favicon.ico',
+    BASE_PATH + 'appImages/favicon-16x16.png',
+    BASE_PATH + 'appImages/favicon-32x32.png',
+    BASE_PATH + 'appImages/favicon-96x96.png',
+    BASE_PATH + 'appImages/ms-icon-70x70.png',
+    BASE_PATH + 'appImages/ms-icon-144x144.png',
+    BASE_PATH + 'appImages/ms-icon-150x150.png',
+    BASE_PATH + 'appImages/ms-icon-310x310.png',
     
 ];
 
