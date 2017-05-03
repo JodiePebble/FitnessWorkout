@@ -17,6 +17,8 @@ var CACHED_URLS = [
     BASE_PATH + 'offline-map.js',
     BASE_PATH + 'scripts/mdl/package.json',
     BASE_PATH + 'scripts/mdl/bower.json',
+    BASE_PATH + 'manifest.json',
+    
     
     // Styles
     BASE_PATH + 'styles/style.css',
