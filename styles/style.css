@@ -244,3 +244,7 @@ input {
 .card > #offline-map-container{
     display: none;
 }
+
+.card > .gym-title {
+    padding: 15px;
+}
