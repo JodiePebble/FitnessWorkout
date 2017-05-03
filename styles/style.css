@@ -248,3 +248,7 @@ input {
 .card > div > .gym-title {
     padding: 15px;
 }
+
+.card > div > .gym-title > #map-container{
+    padding: 5px;
+}
