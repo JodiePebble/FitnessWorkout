@@ -177,7 +177,7 @@ if(existingList){
 //                                        "<button on-click='displayOverlay()'>" +
                                             "<p>"+ existing_workouts[i].exerciseName +"</p>" +
                                             "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting("+ i +")'>" +
-                                                " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
+                                                " <image class='material-icons' src='appImages/add_circle_black.png'></image>"+
                                             "</button>"+
 //                                        "</button>" + 
                                     "</div>"
@@ -191,7 +191,7 @@ function updateDisplay(){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                                                 "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
                                                 "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
-                                                   " <image class='material-icons' src='appImages/add_circle_black.png'></image>"+
+                                                   " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
                                                 "</button>"+
                                             " </div>"
         }
