@@ -40,6 +40,9 @@ var CACHED_URLS = [
     BASE_PATH + 'appImages/ms-icon-150x150.png',
     BASE_PATH + 'appImages/ms-icon-310x310.png',
     
+    'https://fonts.googleapis.com/icon?family=Material+Icons',
+    
+    
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';
