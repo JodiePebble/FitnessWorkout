@@ -18,7 +18,7 @@ a{
     margin: 10px;
     background: #ffffff;
     border-radius: 4px;
-    max-height: 500px
+    max-width: 500px
 }
 
 .create_card{
