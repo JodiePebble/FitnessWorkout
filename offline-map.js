@@ -2,8 +2,6 @@ document.getElementById('map-container').style.display = 'none';
 document.getElementById('offline-map-container').style.display = 'block';
 
 var offlineMapContainer = document.getElementById('offline-map-container');
-offlineMapContainer.style.display = 'block';
-
 
 if(offlineMapContainer){
     for(var i =0; i <= gyms.length -1; i ++){
