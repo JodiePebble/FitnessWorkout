@@ -248,6 +248,6 @@ input {
     display: none;
 }
 
-.card > .containers > #offline-map-container > .gym-title {
+.card > div > .gym-title {
     padding: 15px;
 }
