@@ -29,6 +29,7 @@ var CACHED_URLS = [
     BASE_PATH + 'appImages/done_black.png',
     BASE_PATH + 'appImages/home_black.png',
     BASE_PATH + 'appImages/menu_black.png',
+    BASE_PATH + 'appImages/fitness_center_black.png',
     BASE_PATH + 'appImages/favicon.ico',
     BASE_PATH + 'appImages/favicon-16x16.png',
     BASE_PATH + 'appImages/favicon-32x32.png',
