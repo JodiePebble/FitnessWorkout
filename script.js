@@ -51,7 +51,6 @@ if(workoutsContainer){
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                                         "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
                                                     "</div>" +
-                                                    "<i class='material-icons'>&#xE147;</i>"+
                                                 "</a>"+
                                             "</button>"+
                                         "</div>";
@@ -68,7 +67,6 @@ if(workoutsContainer){
                                                             "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
                                                             "<p class='card-exercise'>"+ exercises.length +  " execises</p>" +
                                                         "</div>" +
-                                                        "<i class='material-icons'>&#xE147;</i>"+
                                                     "</a>"+
                                                 "</button>"+
                                             "</div>";
