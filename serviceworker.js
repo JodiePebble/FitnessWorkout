@@ -16,13 +16,12 @@ var CACHED_URLS = [
     BASE_PATH + 'script.js',
     BASE_PATH + 'offline-map.js',
     BASE_PATH + 'scripts/mdl/package.json',
-
+    BASE_PATH + 'scripts/mdl/bower.json',
+    
     // Styles
     BASE_PATH + 'styles/style.css',
     BASE_PATH + 'scripts/mdl/material.min.css',
-    BASE_PATH + 'scripts/mdl/material.min.js',
-    BASE_PATH + 'scripts/mdl/bower.json',
-    BASE_PATH + 'colour.css'
+    BASE_PATH + 'scripts/mdl/material.min.js'
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wSjjoqU7OoY5FBBYx9eZuXAV7WLO4iU&callback=initMap';

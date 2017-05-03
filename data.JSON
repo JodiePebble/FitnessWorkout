@@ -39,6 +39,11 @@ var existing_workouts = [
 
 var gyms = [
     {
+        "name": "Staffordshire University Gym",
+        "address" : "",
+        "openingTimes" : ""
+    },
+    {
         "name": "24/7 Gym",
         "address" : "",
         "openingTimes" : ""
