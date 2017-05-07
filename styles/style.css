@@ -15,7 +15,11 @@ a{
 }
 
 .page-content{
-    text-align: '-webkit-center';
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
 }
 .card{
     margin: 10px;
