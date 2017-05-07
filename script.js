@@ -20,6 +20,8 @@ function initMap() {
     });
     
     var marker, i;
+    var infowindow = new google.maps.InfoWindow();
+
     
     marker = new google.maps.Marker({
         position: {lat: 53.0103798, lng: -2.1801833}, 
