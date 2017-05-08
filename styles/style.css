@@ -181,6 +181,10 @@ input.add_workout {
     flex-direction: column
 }
 
+.new_list > p{
+    margin-top: 15px;
+}
+
 .workout_list{
     height: 300px;
 }
