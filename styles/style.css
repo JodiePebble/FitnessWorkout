@@ -262,7 +262,6 @@ input.add_workout {
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2;
-    display: flex;
     justify-content: center;
     align-items: center;
     

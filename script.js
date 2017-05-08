@@ -131,7 +131,7 @@ function changeView (){
 }
 
 function changeTime() {
-    document.getElementById("overlay").style.display = "block";
+    document.getElementById("overlay").style.display = "flex";
 }
 
 var id = localStorage.getItem('id'),
