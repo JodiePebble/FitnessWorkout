@@ -250,8 +250,8 @@ function removeExisting(exerciseID) {
     var exercise = document.getElementsByClassName('exercise');
     for(var i = 0; i <= exercise.length -1; i++){
         if(exerciseID === i){
-            
-            exerciseList.splice(exerciseID, 1);
+            console.log(exerciseList);
+//            exerciseList.splice(exerciseID, 1);
         }
     }
     localStorage.setItem('exercise_list', JSON.stringify(exerciseList));
