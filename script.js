@@ -170,7 +170,7 @@ if(existingList){
         workoutNameInput.value = localStorage.getItem('workout_name');
     }
     
-    if(localStorage.getItem('exercise_list')){
+//    if(localStorage.getItem('exercise_list')){
         var array = JSON.parse(localStorage.getItem('exercise_list'));
         
         for(var i = 0; i <= array.length -1; i++){
@@ -181,7 +181,7 @@ if(existingList){
                                                 "</button>"+
                                             " </div>"
         }
-    }
+//    }
     
     for(var i = 0; i <= existing_workouts.length -1; i++){
         
