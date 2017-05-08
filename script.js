@@ -58,7 +58,7 @@ if(workoutsContainer){
                                                     "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
+                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
                                                     "</div>" +
                                                 "</a>"+
                                             "</button>"+
@@ -74,7 +74,7 @@ if(workoutsContainer){
                                                         "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                         "<div class='card-info'>" +
                                                             "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
-                                                            "<p class='card-exercise'>"+ exercises.length +  " execises</p>" +
+                                                            "<p class='card-exercise'>"+ exercises.length +  " exercises</p>" +
                                                         "</div>" +
                                                     "</a>"+
                                                 "</button>"+
@@ -92,7 +92,7 @@ if(homeWorkoutsContainer){
                                                     "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
+                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
                                                     "</div>" +
                                                 "</a>"+
                                             "</button>"+
@@ -111,7 +111,7 @@ if(gymWorkoutsContainer){
                                                     "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                     "<div class='card-info'>" +
                                                         "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " execises</p>" +
+                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
                                                     "</div>" +
                                                 "</a>"+
                                             "</button>"+
