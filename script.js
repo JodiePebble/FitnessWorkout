@@ -20,7 +20,7 @@ function initMap() {
     });
     
     var marker, i;
-    var infowindow = new google.maps.InfoWindow();
+        var infowindow = new google.maps.InfoWindow();
 
     
     marker = new google.maps.Marker({
