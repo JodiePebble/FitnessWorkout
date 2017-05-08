@@ -54,7 +54,7 @@ var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
-        localGetWorkouts.push(workout[i]);
+        localGetWorkouts.push(workouts[i]);
         
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
