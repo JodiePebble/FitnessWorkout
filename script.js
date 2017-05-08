@@ -74,7 +74,7 @@ if(workoutsContainer){
             var exercises = localGetWorkouts[j].exercises;
             workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                                 "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                                                    "<a class='goToWorkout' id='"+ (j + workouts.length) +"' href='workout1.html'>" +
+                                                    "<a class='goToWorkout' id='"+ j +"' href='workout1.html'>" +
                                                         "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                                         "<div class='card-info'>" +
                                                             "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
@@ -152,16 +152,16 @@ var id = localStorage.getItem('id'),
     timer = document.getElementById('timer-clock');
 
 if(workoutName){
-    workoutName.innerHTML = workouts[id].name;
-    workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
-    workoutBreak.innerHTML = workouts[id].breakTime;
+    workoutName.innerHTML = localGetWorkouts[id].name;
+    workoutNumExercises.innerHTML = localGetWorkouts[id].exercises.length + ' exercises';
+    workoutBreak.innerHTML = localGetWorkouts[id].breakTime;
 
-    for(var i =0; i <= workouts[id].exercises.length -1; i ++){
+    for(var i =0; i <= localGetWorkouts[id].exercises.length -1; i ++){
         workoutExerciseList.innerHTML += "<div class='exercise'>" +
-                                            "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
+                                            "<p>" + localGetWorkouts[id].exercises[i].exerciseName +"</p>" +
                                             "<div>" +
                                                 "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
-                                                    "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
+                                                    "<p>" + localGetWorkouts[id].exercises[i].exerciseTime +"</p>" + 
                                                 "</button>" +
                                                 "<span> secs</span>" + 
                                             "</div>" +                                
