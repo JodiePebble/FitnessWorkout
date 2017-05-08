@@ -176,7 +176,7 @@ if(existingList){
         for(var i = 0; i <= array.length -1; i++){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                                                 "<p>"+ array[i].exerciseName +"</p>"+ 
-                                                "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                                "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
                                                     " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
                                                 "</button>"+
                                             " </div>"
@@ -246,6 +246,18 @@ function addWorkout() {
     
 }
 
+function removeExisting(exerciseID) {
+    var exercise = document.getElementsByClassName('exercise');
+    for(var i = 0; i <= existing_workouts.length -1; i++){
+        if(exerciseID === i){
+            
+            exercise.splice(i, 1);
+        }
+    }
+    localStorage.setItem('exercise_list', JSON.stringify(exerciseList));
+    updateDisplay();
+}
+
 function addExisting(exerciseID){
     var exercise = document.getElementsByClassName('existing');
     
@@ -257,10 +269,7 @@ function addExisting(exerciseID){
                 "exerciseTime" : 30
             };
             
-            exerciseList.push(newObj);
-//            console.log(exercise[i]);
-//            exercise[i].style.display = 'none';
-            
+            exerciseList.push(newObj);        
         }
     }
     
