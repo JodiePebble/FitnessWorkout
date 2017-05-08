@@ -252,7 +252,7 @@ function addWorkout() {
     
     var exercises = [];
     var name = localStorage.getItem('workout_name');
-    exercises = localStorage.getItem('exercise_list');
+    exercises = JSON.parse(localStorage.getItem('exercise_list'));
     
     console.log(exercises);
     
