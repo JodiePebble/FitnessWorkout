@@ -256,17 +256,22 @@ input.add_workout {
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
-    top: 50px; 
+    top: 0; 
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #overlay > .main_overlay{
-    width: 200px;
-    height: 100px;
+    width: 400px;
+    height: 200px;
+    border-radius: 3px;
     background-color: red
 }
     
