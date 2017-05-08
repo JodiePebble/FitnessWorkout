@@ -79,7 +79,7 @@ if(localWorkoutsContainer){
             localWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                         "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                             "<a class='goToWorkout' id='"+ j +"' href='localWorkout.html'>" +
-                                "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
+                                "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'  alt='fitness center icon'></image>" +
                                 "<div class='card-info'>" +
                                     "<p class='card-title'>" + localGetWorkouts[j].name + "</p>" +
                                     "<p class='card-exercise'>" + exercises.length +  " exercises</p>" +
@@ -116,7 +116,7 @@ if(gymWorkoutsContainer){
              gymWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                     "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
                         "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                            "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
+                            "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'  alt='fitness center icon'></image>" +
                             "<div class='card-info'>" +
                                 "<p class='card-title'>"+ workouts[i].name + "</p>" +
                                 "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
@@ -201,7 +201,7 @@ if(existingList){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                         "<p>"+ array[i].exerciseName +"</p>"+ 
                         "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
-                            " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
+                            " <image class='material-icons' src='appImages/remove_circle_black.png' alt='remove icon'></image>"+
                         "</button>"+
                     " </div>"
         }
@@ -211,12 +211,10 @@ if(existingList){
         
         var name = existing_workouts[i].exerciseName;
         existingList.innerHTML += "<div class='exercise existing'>" +
-//                                        "<button on-click='displayOverlay()'>" +
                                             "<p>"+ existing_workouts[i].exerciseName +"</p>" +
                                             "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='addExisting("+ i +")'>" +
-                                                " <image class='material-icons' src='appImages/add_circle_black.png'></image>"+
+                                                " <image class='material-icons' src='appImages/add_circle_black.png' alt='add icon'></image>"+
                                             "</button>"+
-//                                        "</button>" + 
                                     "</div>"
     }
 }
@@ -228,7 +226,7 @@ function updateDisplay(){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                                                 "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
                                                 "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
-                                                   " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
+                                                   " <image class='material-icons' src='appImages/remove_circle_black.png' alt='remove icon'></image>"+
                                                 "</button>"+
                                             " </div>"
         }
