@@ -43,19 +43,20 @@ function initMap() {
     }
 };
 
-
-
-
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
+
+if(localGetWorkouts = null){
+    localGetWorkouts.push(workouts[i]);
+}
+
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
         localGetWorkouts.push(workouts[i]);
-        console.log(localGetWorkouts);
 //        workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
 //                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
 //                                                "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
@@ -151,8 +152,6 @@ var id = localStorage.getItem('id'),
     exerciseListArea = document.getElementById('exercise_list'),
     timer = document.getElementById('timer-clock');
 
-console.log(localGetWorkouts[id]);
-
 if(workoutName){
     workoutName.innerHTML = localGetWorkouts[id].name;
     workoutNumExercises.innerHTML = localGetWorkouts[id].exercises.length + ' exercises';
@@ -236,7 +235,9 @@ function addWorkout() {
     var exercises = [];
     var name = localStorage.getItem('workout_name');
     exercises = localStorage.getItem('exercise_list');
+    
     console.log(exercises);
+    
     var newWorkout = {
         "name" : name,
         "exercises" : exercises,
