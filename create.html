@@ -75,13 +75,15 @@
                     </div>
                 </div>
 
-                <input placeholder='Workout Name' class="workout_name" id="workout_name-input" oninput="updateLocal()"/>
+                <label for='workout_name-input'>Workout Name</label>
+                <input placeholder='eg. Leg Workout' class="workout_name" id="workout_name-input" oninput="updateLocal()"/>
 
                 <div class='new_list'>
                     <p>Exercises</p>
                     <div>
                         <div class='exercise'>
-                            <input class="add_workout" placeholder='Add new exercise' id='new_exercise'/>
+                            <label for='new_exercise'>Add new exercise</label>
+                            <input class="add_workout" placeholder='eg. Tricep Curls' id='new_exercise'/>
                             <button class='mdl-button mdl-button--colored mdl-js-button' onclick='addNew()'>
                                 <image class="material-icons" src='appImages/add_circle_black.png' alt='add icon'></image>
                             </button>
