@@ -212,46 +212,20 @@ input.add_workout {
     margin: 0;
 }
 
-.time-section {
-    margin-top: 15px
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other 
 }
 
-.time-section > .timer{
-    display: flex;
-    justify-content: center;
-    margin: 20px
-}
-
-.time-section > .start-stop {
-    display: flex;
-    justify-content: space-around
-}
-
-.time-section > .timer > p{
-    font-size: 55px;
-    line-height: 55px;
-    margin: 0
-}
-
-.time-section > div > .start-button > p{
-    padding: 0;
-    margin: 0;
-    color: white
-}
-
-.time-button {
-    padding: 0;
-    min-width: 10px;
-    height: 20px;
-}
-
-.time-button > p{
-    padding: 0;
-    margin: 0;
-    line-height: 0;
-}
-
-/*SETTINGS*/
+/*YOUR GYMS*/
 
 .card > .containers > #offline-map-container{
     display: none;
