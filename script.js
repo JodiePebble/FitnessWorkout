@@ -170,7 +170,7 @@ if(existingList){
         workoutNameInput.value = localStorage.getItem('workout_name');
     }
     
-//    if(localStorage.getItem('exercise_list')){
+    if(localStorage.getItem('exercise_list')){
         var array = JSON.parse(localStorage.getItem('exercise_list'));
         
         for(var i = 0; i <= array.length -1; i++){
@@ -181,7 +181,7 @@ if(existingList){
                                                 "</button>"+
                                             " </div>"
         }
-//    }
+    }
     
     for(var i = 0; i <= existing_workouts.length -1; i++){
         
@@ -198,6 +198,19 @@ if(existingList){
 }
 
 function updateDisplay(){
+    if(localStorage.getItem('exercise_list')){
+        var array = JSON.parse(localStorage.getItem('exercise_list'));
+        
+        for(var i = 0; i <= array.length -1; i++){
+            exerciseListArea.innerHTML += "<div class='exercise'>" +
+                                                "<p>"+ array[i].exerciseName +"</p>"+ 
+                                                "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
+                                                    " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
+                                                "</button>"+
+                                            " </div>"
+        }
+    }
+    
     exerciseListArea.innerHTML = "";
     if(exerciseListArea){
         for(var i = 0; i <= exerciseList.length -1; i++){
