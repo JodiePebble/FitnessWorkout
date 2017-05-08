@@ -52,7 +52,7 @@ var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
-
+console.log(localGetWorkouts);
 
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
