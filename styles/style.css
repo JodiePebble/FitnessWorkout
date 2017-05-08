@@ -185,7 +185,7 @@ input.add_workout {
     margin-top: 15px;
 }
 
-.new_list > div > .exercise{
+.new_list > div > .new_exercise-container{
     display: flex;
     flex-direction: column
 }
