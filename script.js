@@ -198,25 +198,12 @@ if(existingList){
 }
 
 function updateDisplay(){
-    if(localStorage.getItem('exercise_list')){
-        var array = JSON.parse(localStorage.getItem('exercise_list'));
-        
-        for(var i = 0; i <= array.length -1; i++){
-            exerciseListArea.innerHTML += "<div class='exercise'>" +
-                                                "<p>"+ array[i].exerciseName +"</p>"+ 
-                                                "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
-                                                    " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
-                                                "</button>"+
-                                            " </div>"
-        }
-    }
-    
     exerciseListArea.innerHTML = "";
     if(exerciseListArea){
         for(var i = 0; i <= exerciseList.length -1; i++){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
                                                 "<p>"+ exerciseList[i].exerciseName +"</p>"+ 
-                                                "<button class='mdl-button mdl-button--colored mdl-js-button'>" +
+                                                "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
                                                    " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
                                                 "</button>"+
                                             " </div>"
