@@ -48,7 +48,7 @@ var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 
-var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
+var localGetWorkouts = localStorage.getItem('local_workouts');
 //localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
 if(workoutsContainer){
