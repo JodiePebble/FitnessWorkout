@@ -259,6 +259,7 @@ function addExisting(exerciseID){
             
             exerciseList.push(newObj);
         }
+        console.log(exercise[i]);
         exercise[i].style.display = 'none';
     }
     
