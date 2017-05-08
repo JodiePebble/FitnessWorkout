@@ -233,7 +233,7 @@ function updateDisplay(){
 
 //CREATE NEW
 function updateLocal(){
-    console.log(workoutNameInput.value);
+    console.log(workoutNameInput);
     localStorage.setItem('workout_name', workoutNameInput.value);
 }
 
