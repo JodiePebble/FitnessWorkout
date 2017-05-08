@@ -153,7 +153,7 @@ var id = localStorage.getItem('id'),
 for(var i = 0; i <= workouts.length -1; i++){
     localWorkouts.push(workouts[i]);
     
-    localStorage.setItem('local_workouts', localWorkouts);
+    localStorage.setItem('local_workouts', JSON.parse(localWorkouts));
 }
 
 if(workoutName){
