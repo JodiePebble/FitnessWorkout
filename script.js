@@ -67,8 +67,10 @@ if(workoutsContainer) {
     }
 }
 
+
+var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 if(localWorkoutsContainer){
-    localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
+//    localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
     if(localGetWorkouts != null) {
         
