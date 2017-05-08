@@ -119,9 +119,14 @@ footer {
 .create_card_inner{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     min-height: 66px;
     border-radius: 0;
     border-bottom: 1px solid #424242;
+}
+
+.create_card_inner > div{
+    display: flex;
 }
 
 .create_card_inner > .card-info{
