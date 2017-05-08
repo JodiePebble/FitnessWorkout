@@ -264,7 +264,7 @@ input.add_workout {
     z-index: 2;
 }
 
-#overlay > .main-overlay{
+#overlay > .main_overlay{
     width: 200px;
     height: 100px;
     background-color: red
