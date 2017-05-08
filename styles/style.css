@@ -180,6 +180,8 @@ input.add_workout {
 
 .exercise_list{
     margin-top: 15px;
+    padding-bottom: 15px;
+    overflow: auto;
     border-bottom: 1px solid #424242
 }
 
