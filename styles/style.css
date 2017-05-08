@@ -167,15 +167,16 @@ input.add_workout {
 .new_list{
     margin: 15px;
     display: flex;
+    overflow: auto;
     flex-direction: column
 }
 
 .workout_list{
-    height: 200px
+    height: 300px;
 }
 
 .new_exercise{
-    height: 130px
+    height: 130px;
 }
 
 .exercise_list{
