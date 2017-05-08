@@ -251,7 +251,7 @@ function removeExisting(exerciseID) {
     for(var i = 0; i <= exercise.length -1; i++){
         if(exerciseID === i){
             
-//            exercise.splice(i, 1);
+            exerciseList.splice(i, 1);
         }
     }
     localStorage.setItem('exercise_list', JSON.stringify(exerciseList));
