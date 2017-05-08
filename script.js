@@ -43,6 +43,9 @@ function initMap() {
     }
 };
 
+
+
+
 var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
@@ -146,6 +149,10 @@ var id = localStorage.getItem('id'),
     newExerciseInput = document.getElementById('new_exercise'),
     exerciseListArea = document.getElementById('exercise_list'),
     timer = document.getElementById('timer-clock');
+
+for(var i = 0; i <= workouts.length -1; i++){
+    localWorkouts.push(workouts[i]);
+}
 
 if(workoutName){
     workoutName.innerHTML = workouts[id].name;
