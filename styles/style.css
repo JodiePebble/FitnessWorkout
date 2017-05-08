@@ -267,4 +267,5 @@ input.add_workout {
 
 .card > .containers > #offline-map-container > div > .card-info > .gym-name{
     font-weight: bold;
+    width: 150px
 }
