@@ -52,10 +52,9 @@ var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
-console.log(localGetWorkouts);
-
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
+        localGetWorkouts.push(workout[i]);
         
         workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                                             "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
