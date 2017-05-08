@@ -264,7 +264,8 @@ function addWorkout() {
     }
     
     localWorkouts.push(newWorkout);
-    console.log(JSON.stringify(localWorkouts));
+    
+    console.log(localWorkouts);
     localStorage.setItem('local_workouts', localWorkouts);
     
     localStorage.removeItem('workout_name');
