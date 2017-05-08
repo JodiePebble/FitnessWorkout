@@ -65,7 +65,7 @@ if(workoutsContainer){
                 "</button>"+
             "</div>";
         } else {
-            console.log(localGetWorkouts);
+            console.log(JSON.parse(localGetWorkouts));
             localGetWorkouts.push(workouts[i]);
             
             for(var j =0; j <= localGetWorkouts.length -1; j ++){
