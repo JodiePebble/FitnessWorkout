@@ -48,7 +48,7 @@ var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 
-var localGetWorkouts = localStorage.getItem('local_workouts');
+var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
@@ -261,7 +261,7 @@ function addWorkout() {
     }
     
     localWorkouts.push(newWorkout);
-    
+    console.log(JSON.stringify(localWorkouts));
     localStorage.setItem('local_workouts', localWorkouts);
     
     localStorage.removeItem('workout_name');
