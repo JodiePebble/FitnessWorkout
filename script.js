@@ -248,10 +248,10 @@ function addWorkout() {
 
 function removeExisting(exerciseID) {
     var exercise = document.getElementsByClassName('exercise');
-    for(var i = 0; i <= existing_workouts.length -1; i++){
+    for(var i = 0; i <= exercise.length -1; i++){
         if(exerciseID === i){
             
-            exercise.splice(i, 1);
+//            exercise.splice(i, 1);
         }
     }
     localStorage.setItem('exercise_list', JSON.stringify(exerciseList));
