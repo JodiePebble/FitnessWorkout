@@ -130,6 +130,10 @@ function changeView (){
     localStorage.setItem('id', this.id);
 }
 
+function changeTime() {
+    document.getElementById("overlay").style.display = "block";
+}
+
 var id = localStorage.getItem('id'),
     workoutName = document.getElementById('workout-name'),
     workoutNumExercises = document.getElementById('workout-exercises'),
@@ -152,7 +156,7 @@ if(workoutName){
         workoutExerciseList.innerHTML += "<div class='exercise'>" +
                                             "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
                                             "<div>" +
-                                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
+                                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button' onclick='changeTime()'>" + 
                                                     "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
                                                 "</button>" +
                                                 "<span> secs</span>" + 
