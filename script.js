@@ -49,7 +49,7 @@ var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 
-var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
+var localGetWorkouts = [];
 
 if(workoutsContainer) {   
     for(var i =0; i <= workouts.length -1; i ++){
@@ -68,7 +68,10 @@ if(workoutsContainer) {
 }
 
 if(localWorkoutsContainer){
+    localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
+
     if(localGetWorkouts != null) {
+        
         for(var j =0; j <= localGetWorkouts.length -1; j ++){            
             var exercises = localGetWorkouts[j].exercises;
             localWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
@@ -256,7 +259,7 @@ function addWorkout() {
         "breakTime" : 10,
         "homeOrGym" : "home",
     }
-    console.log(localGetWorkouts);
+
     localGetWorkouts.push(newWorkout);
     
     localStorage.setItem('local_workouts', JSON.stringify(localGetWorkouts));
