@@ -44,57 +44,40 @@ function initMap() {
 };
 
 var workoutsContainer = document.getElementById('workouts-content');
+var localWorkoutsContainer = document.getElementById('local-workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
 
-var localGetWorkouts = localStorage.getItem('local_workouts');
+var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
-if(workoutsContainer){
+if(workoutsContainer) {   
     for(var i =0; i <= workouts.length -1; i ++){
-        if(localGetWorkouts === null){
-            workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
-                "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                    "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                        "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
-                        "<div class='card-info'>" +
-                            "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                            "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
-                        "</div>" +
-                    "</a>"+
-                "</button>"+
-            "</div>";
-        } else {
-            console.log(JSON.stringify(localGetWorkouts));
-            localGetWorkouts.push(workouts[i]);
-            
-            for(var j =0; j <= localGetWorkouts.length -1; j ++){
-                var exercises = localGetWorkouts[j].exercises;
-                workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
-                    "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                        "<a class='goToWorkout' id='"+ j +"' href='workout1.html'>" +
-                            "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
-                            "<div class='card-info'>" +
-                                "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
-                                "<p class='card-exercise'>"+ exercises.length +  " exercises</p>" +
-                            "</div>" +
-                        "</a>"+
-                    "</button>"+
-                "</div>";
-            };  
-        }
-    };
-    if(localGetWorkouts){
-
-        for(var j =0; j <= localGetWorkouts.length -1; j ++){
-            var exercises = localGetWorkouts[j].exercises;
-            workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+        workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
                         "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                            "<a class='goToWorkout' id='"+ j +"' href='workout1.html'>" +
+                            "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
                                 "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
                                 "<div class='card-info'>" +
-                                    "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
-                                    "<p class='card-exercise'>"+ exercises.length +  " exercises</p>" +
+                                    "<p class='card-title'>" + workouts[i].name + "</p>" +
+                                    "<p class='card-exercise'>" + workouts[i].exercises.length +  " exercises</p>" +
+                                "</div>" +
+                            "</a>"+
+                        "</button>"+
+                    "</div>";
+    }
+}
+
+if(localWorkoutsContainer){
+    if(localGetWorkouts != null) {
+        for(var j =0; j <= localGetWorkouts.length -1; j ++){            
+            var exercises = localGetWorkouts[j].exercises;
+            localWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+                        "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                            "<a class='goToWorkout' id='"+ j +"' href='localWorkout.html'>" +
+                                "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
+                                "<div class='card-info'>" +
+                                    "<p class='card-title'>" + localGetWorkouts[j].name + "</p>" +
+                                    "<p class='card-exercise'>" + exercises.length +  " exercises</p>" +
                                 "</div>" +
                             "</a>"+
                         "</button>"+
@@ -126,16 +109,16 @@ if(gymWorkoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
         if(workouts[i].homeOrGym === 'gym'){
              gymWorkoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
-                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-                                                "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-                                                    "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
-                                                    "<div class='card-info'>" +
-                                                        "<p class='card-title'>"+ workouts[i].name + "</p>" +
-                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
-                                                    "</div>" +
-                                                "</a>"+
-                                            "</button>"+
-                                        "</div>";
+                    "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                        "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
+                            "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
+                            "<div class='card-info'>" +
+                                "<p class='card-title'>"+ workouts[i].name + "</p>" +
+                                "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
+                            "</div>" +
+                        "</a>"+
+                    "</button>"+
+                "</div>";
         }
     }
 }
@@ -150,42 +133,56 @@ function changeView (){
     localStorage.setItem('id', this.id);
 }
 
-function changeTime() {
-    document.getElementById("overlay").style.display = "flex";
-}
-
 var id = localStorage.getItem('id'),
+    localId = localStorage.getItem('localId'),
     workoutName = document.getElementById('workout-name'),
     workoutNumExercises = document.getElementById('workout-exercises'),
     workoutExerciseList = document.getElementById('workout-exercise-list'),
+    localWorkoutExerciseList = document.getElementById('local-workout-exercise-list'),
     workoutBreak = document.getElementById('workout-break'),
     existingList = document.getElementById('existing_list'),
     workoutNameInput = document.getElementById('workout_name-input'),
     exerciseList = [],
-    localWorkouts = [],
     newExerciseInput = document.getElementById('new_exercise'),
     exerciseListArea = document.getElementById('exercise_list'),
     timer = document.getElementById('timer-clock');
 
-console.log(workoutNameInput);
+if(workoutExerciseList){
+    workoutName.innerHTML = workouts[id].name;
+    workoutNumExercises.innerHTML = workouts[id].exercises.length + ' exercises';
+    workoutBreak.innerHTML = workouts[id].breakTime;
 
-if(workoutName){
+    for(var i =0; i <= workouts[id].exercises.length -1; i ++){
+        workoutExerciseList.innerHTML += "<div class='exercise'>" +
+                            "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
+                            "<div>" +
+                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
+                                    "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
+                                "</button>" +
+                                "<span> secs</span>" + 
+                            "</div>" +                                
+                        "</div>"
+    } 
+}
+
+if(localWorkoutExerciseList){
     workoutName.innerHTML = localGetWorkouts[id].name;
     workoutNumExercises.innerHTML = localGetWorkouts[id].exercises.length + ' exercises';
     workoutBreak.innerHTML = localGetWorkouts[id].breakTime;
 
     for(var i =0; i <= localGetWorkouts[id].exercises.length -1; i ++){
-        workoutExerciseList.innerHTML += "<div class='exercise'>" +
-                                            "<p>" + localGetWorkouts[id].exercises[i].exerciseName +"</p>" +
-                                            "<div>" +
-                                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
-                                                    "<p>" + localGetWorkouts[id].exercises[i].exerciseTime +"</p>" + 
-                                                "</button>" +
-                                                "<span> secs</span>" + 
-                                            "</div>" +                                
-                                        "</div>"
-    }
+        localWorkoutExerciseList.innerHTML += "<div class='exercise'>" +
+                            "<p>" + localGetWorkouts[id].exercises[i].exerciseName +"</p>" +
+                            "<div>" +
+                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
+                                    "<p>" + localGetWorkouts[id].exercises[i].exerciseTime +"</p>" + 
+                                "</button>" +
+                                "<span> secs</span>" + 
+                            "</div>" +                                
+                        "</div>"
+    } 
 }
+
 
 if(existingList){
     if(localStorage.getItem('workout_name')){
@@ -197,11 +194,11 @@ if(existingList){
         
         for(var i = 0; i <= array.length -1; i++){
             exerciseListArea.innerHTML += "<div class='exercise'>" +
-                                                "<p>"+ array[i].exerciseName +"</p>"+ 
-                                                "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
-                                                    " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
-                                                "</button>"+
-                                            " </div>"
+                        "<p>"+ array[i].exerciseName +"</p>"+ 
+                        "<button class='mdl-button mdl-button--colored mdl-js-button' onclick='removeExisting("+ i +")'>" +
+                            " <image class='material-icons' src='appImages/remove_circle_black.png'></image>"+
+                        "</button>"+
+                    " </div>"
         }
     }
     
@@ -235,7 +232,6 @@ function updateDisplay(){
 
 //CREATE NEW
 function updateLocal(){
-    console.log(workoutNameInput);
     localStorage.setItem('workout_name', workoutNameInput.value);
 }
 
@@ -253,24 +249,21 @@ function addWorkout() {
     var exercises = [];
     var name = localStorage.getItem('workout_name');
     exercises = JSON.parse(localStorage.getItem('exercise_list'));
-    
-    console.log(exercises);
-    
+        
     var newWorkout = {
         "name" : name,
         "exercises" : exercises,
         "breakTime" : 10,
         "homeOrGym" : "home",
     }
+    console.log(localGetWorkouts);
+    localGetWorkouts.push(newWorkout);
     
-    localWorkouts.push(newWorkout);
-    
-    console.log(localWorkouts);
-    localStorage.setItem('local_workouts', localWorkouts);
+    localStorage.setItem('local_workouts', JSON.stringify(localGetWorkouts));
     
     localStorage.removeItem('workout_name');
     localStorage.removeItem('exercise_list');
-//    window.location.href = 'index.html';
+    window.location.href = 'index.html';
     
 }
 

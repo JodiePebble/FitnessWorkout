@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="scripts/mdl/material.min.css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-blue.min.css" />
     <script src="scripts/mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     <link rel="apple-touch-icon" sizes="57x57" href="appimages/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="appimages/apple-icon-60x60.png">
@@ -42,7 +43,7 @@
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="index.html"><image src='appImages/home_black.png'></image></a>
+                    <a class="mdl-navigation__link" href="index.html"><image class="material-icons" src='appImages/home_black.png'></image></a>
                 </nav>
             </div>
         </header>
@@ -55,26 +56,48 @@
                 <a class="mdl-navigation__link" href="settings.html">Your Local Gyms</a>
             </nav>
         </div>
-        <main class="mdl-layout__content">
-            <div class="page-content"> 
-                <div class="mdl-shadow--2dp card">
-                    <button class="card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button">
-                        <a href="create.html">
-                            <image class="material-icons" src='appImages/fitness_center_black.png'></image>
-                            <p class='card-title'>Create new workout</p>
-                        </a>
-                    </button>
+          
+        <main class="mdl-layout__content main_card">
+                <div class="mdl-shadow--2dp card create_new_card">
+                    <div class="create_card_inner mdl-card__actions">
+            
+                        <image class="material-icons card-icon" src='appImages/fitness_center_black.png'></image>
+                        
+                        <div class='card-info'>
+                            <p class='card-title' id='workout-name'></p>
+                            <p class='card-exercise' id='workout-exercises'></p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class='new_list'>            
+                        <div class='exercise_list workout_list' id='local-workout-exercise-list'>
+                        </div>
+                        
+                        <div class='time-section'>
+                            <button class='time-button mdl-button mdl-button--colored mdl-js-button'>
+                                <p id='workout-break'></p>
+                            </button>
+                            <span>secs break between each exercise</p>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div>
-                    <h3 class='mdl-layout-title'>Your Workouts</h3>
-                    <div id='local-workouts-content'></div>
-                </div>
-                <div>
-                    <h3 class='mdl-layout-title'>Our Workouts</h3>
-                    <div id='workouts-content'></div>
-                </div>
-            </div>
         </main>
+          
+        <div id="overlay">
+            <div class="main_overlay">
+                <h1>Hello</h1>
+                <div>
+                    <p>0</p>
+                    <input class="mdl-slider mdl-js-slider" type="range" min="0" max="60" value="30" step="5" tabindex="0">
+                    <p>60</p>
+                </div>
+                
+                <button>Set</button>
+            </div>
+        </div>
+          
         <footer class="">
             <a href='homeWorkout.html' class="footer__left-section">
                 <div class="mdl-logo">Home Workouts</div>
@@ -88,6 +111,5 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="data.JSON"></script>
     <script src="script.js"></script>
-    
   </body>
 </html>
