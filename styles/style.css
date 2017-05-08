@@ -265,6 +265,8 @@ input.add_workout {
 }
 
 #overlay > .main-overlay{
+    width: 200px;
+    height: 100px;
     background-color: red
 }
     
