@@ -270,7 +270,7 @@ function addWorkout() {
     
     localStorage.removeItem('workout_name');
     localStorage.removeItem('exercise_list');
-    window.location.href = 'index.html';
+//    window.location.href = 'index.html';
     
 }
 
