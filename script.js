@@ -47,27 +47,40 @@ var workoutsContainer = document.getElementById('workouts-content');
 var homeWorkoutsContainer = document.getElementById('home_workouts-content');
 var gymWorkoutsContainer = document.getElementById('gym_workouts-content');
 var overlay = document.getElementById('overlay');
+
 var localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
-
-
-if(localGetWorkouts = null){
-    localGetWorkouts.push(workouts[i]);
-}
+//localGetWorkouts = JSON.parse(localStorage.getItem('local_workouts'));
 
 if(workoutsContainer){
     for(var i =0; i <= workouts.length -1; i ++){
-        localGetWorkouts.push(workouts[i]);
-//        workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
-//                                            "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
-//                                                "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
-//                                                    "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
-//                                                    "<div class='card-info'>" +
-//                                                        "<p class='card-title'>"+ workouts[i].name + "</p>" +
-//                                                        "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
-//                                                    "</div>" +
-//                                                "</a>"+
-//                                            "</button>"+
-//                                        "</div>";
+        if(localGetWorkouts === null){
+            workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+                                    "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                                        "<a class='goToWorkout' id='"+ i +"' href='workout1.html'>" +
+                                            "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
+                                            "<div class='card-info'>" +
+                                                "<p class='card-title'>"+ workouts[i].name + "</p>" +
+                                                "<p class='card-exercise'>"+ workouts[i].exercises.length +  " exercises</p>" +
+                                            "</div>" +
+                                        "</a>"+
+                                    "</button>"+
+                                "</div>";
+        } else {
+            for(var j =0; j <= localGetWorkouts.length -1; j ++){
+                var exercises = localGetWorkouts[j].exercises;
+                workoutsContainer.innerHTML += "<div class='mdl-shadow--2dp card'>" +
+                                                    "<button class='card_inner mdl-card__actions mdl-button mdl-button--colored mdl-js-button'>"+
+                                                        "<a class='goToWorkout' id='"+ j +"' href='workout1.html'>" +
+                                                            "<image class='material-icons card-icon' src='appImages/fitness_center_black.png'></image>" +
+                                                            "<div class='card-info'>" +
+                                                                "<p class='card-title'>"+ localGetWorkouts[j].name + "</p>" +
+                                                                "<p class='card-exercise'>"+ exercises.length +  " exercises</p>" +
+                                                            "</div>" +
+                                                        "</a>"+
+                                                    "</button>"+
+                                                "</div>";
+            };  
+        }
     };
     if(localGetWorkouts){
 
