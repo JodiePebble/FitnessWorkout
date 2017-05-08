@@ -156,8 +156,12 @@ footer {
     border-top: 1px solid black
 }
 
+label.workout_name-label{
+    margin: 0 15px;
+}
+
 .workout_name{
-    margin: 15px 15px 0 15px ;
+    margin: 0 15px;
 }
 
 input {
