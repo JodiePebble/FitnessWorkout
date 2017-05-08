@@ -261,6 +261,10 @@ input.add_workout {
     padding-left: 15px;
 }
 
+.card > .containers > #offline-map-container > div > .card-info{
+    display: flex;
+}
+
 .card > .containers > #offline-map-container > div > .card-info > .gym-name{
     font-weight: bold;
 }
