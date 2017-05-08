@@ -156,7 +156,7 @@ if(workoutName){
         workoutExerciseList.innerHTML += "<div class='exercise'>" +
                                             "<p>" + workouts[id].exercises[i].exerciseName +"</p>" +
                                             "<div>" +
-                                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button' onclick='changeTime()'>" + 
+                                                "<button class='time-button mdl-button mdl-button--colored mdl-js-button'>" + 
                                                     "<p>" + workouts[id].exercises[i].exerciseTime +"</p>" + 
                                                 "</button>" +
                                                 "<span> secs</span>" + 

@@ -34,7 +34,20 @@ var workouts = [
 var existing_workouts = [
     {
         "exerciseName": "Burpees",
+    },
+    {
+        "exerciseName": "Tricep Curls",
+    },
+    {
+        "exerciseName": "Squats",
+    },
+    {
+        "exerciseName": "Bench Press",
+    },
+    {
+        "exerciseName": "Push Ups",
     }
+    
 ]
 
 var gyms = [
