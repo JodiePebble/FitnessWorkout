@@ -151,6 +151,8 @@ var id = localStorage.getItem('id'),
     exerciseListArea = document.getElementById('exercise_list'),
     timer = document.getElementById('timer-clock');
 
+console.log(localGetWorkouts[id]);
+
 if(workoutName){
     workoutName.innerHTML = localGetWorkouts[id].name;
     workoutNumExercises.innerHTML = localGetWorkouts[id].exercises.length + ' exercises';
