@@ -233,8 +233,8 @@ function remove() {
 
 function addWorkout() {
     var name = localStorage.getItem('workout_name');
-    var exercises = JSON.parse(localStorage.getItem('exercise_list'));
-    
+    var exercises = localStorage.getItem('exercise_list');
+    console.log(exercises);
     var newWorkout = {
         "name" : name,
         "exercises" : exercises,
@@ -244,7 +244,7 @@ function addWorkout() {
     
     localWorkouts.push(newWorkout);
     
-    localStorage.setItem('local_workouts', JSON.stringify(localWorkouts));
+    localStorage.setItem('local_workouts', localWorkouts);
     
     localStorage.removeItem('workout_name');
     localStorage.removeItem('exercise_list');
