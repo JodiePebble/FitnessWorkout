@@ -245,7 +245,7 @@ function remove() {
     localStorage.clear();
     window.location.href = 'index.html';
 }
-
+localGetWorkouts = [];
 function addWorkout() {
     
     var exercises = [];
